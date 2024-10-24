@@ -1,10 +1,9 @@
 import logo from '../../assets/images/Brainflix-logo.svg'
-console.log(logo)
 
 export default function Logo() {
     return (
         <>
-        <img src={logo} alt="Logo" />;
+            <img classname="header__logo" src={logo} alt="brainflix logo" />
         </>
     )
 }
