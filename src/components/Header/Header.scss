@@ -1,0 +1,13 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.header {
+    @include flexy-box-align(column, center, center);
+    width: 100%;
+    padding: 0rem $mobile-padding-between-components;
+}
+.header__horizontal-container {
+    @include flexy-box-align(row, center, center);
+    width: 100%;
+}

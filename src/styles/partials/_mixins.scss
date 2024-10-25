@@ -1,0 +1,35 @@
+@use "./variables" as *;
+
+
+@mixin font-styling($size,$weight,$lineheight){
+    font-size: $size;
+    font-weight: $weight;
+    line-height:$lineheight;
+}
+
+@mixin flexy-box-align($direction, $align, $justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+
+@mixin desktop {
+    @media (min-width: $desktop){
+        @content;
+    }
+}
+
+
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }    
+}
+
+@mixin breakpoint_hero {
+    @media (min-width: 22.8125rem) {
+        @content;
+    }    
+}

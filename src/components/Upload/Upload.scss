@@ -1,0 +1,26 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+
+.header {
+    &__container {
+        @include flexy-box-align(row, center, left);
+        border-radius: .25rem;
+        border: 1px solid $mercury;
+        min-height: 2.25rem;
+        min-width: 15rem;
+        padding-left: 6px;
+        margin-right: 6px;
+        @include tablet{
+            min-height: 2.5rem;
+        }
+    }
+    &__upload {
+        min-height: 2.25rem;
+        min-width: 15rem;
+        height: 100%;
+        padding: 0rem .75rem;
+        border: none;
+    }
+}

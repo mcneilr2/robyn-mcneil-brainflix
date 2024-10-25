@@ -1,7 +1,8 @@
-import UploadBar from './Upload'
-import Logo from './Logo'
-import SearchBar from './Search'
-import Avatar from './Avatar'
+import Upload from '../Upload/Upload'
+import Logo from '../Logo/Logo'
+import SearchBar from '../Search/Search'
+import Avatar from '../Avatar/Avatar'
+import './Header.scss'
 
 
 export default function Header() {
@@ -9,8 +10,10 @@ export default function Header() {
     <>
         <header className = "header">
             <Logo />
-            <SearchBar />
-            <Avatar />
+            <div className="header__horizontal-container">
+                <SearchBar />
+                <Avatar />
+            </div>
             <Upload />
         </header>
     </>

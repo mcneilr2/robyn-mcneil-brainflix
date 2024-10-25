@@ -1,0 +1,16 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header__avatar {
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: $mercury;
+    max-height: 2.25rem;
+    max-width: 2.25rem;
+    &-container {
+        box-sizing: content-box;
+        display: flex;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
