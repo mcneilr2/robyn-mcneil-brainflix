@@ -12,12 +12,13 @@
         border-radius: .25rem;
         border: 1px solid $brainflix-blue;
         height: 2.5rem;
-        width: 100%;
+        width: 97%;
         padding-left: 6px;
-        margin: $mobile-padding-between-components;
+        margin: $mobile-padding-between-components 0rem;
         background-color: $brainflix-blue;
         @include tablet {
             min-width: 9.375rem;
+            margin: 0rem $large-padding-between-components/2;
         }
 
     }

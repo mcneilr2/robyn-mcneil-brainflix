@@ -9,10 +9,6 @@
     font-family: 'Avenir';
 }
 
-body {
-    @include flexy-box-align(column, center, center);
-    flex-wrap: wrap;
-}
 
 @font-face {
     font-family: 'Avenir';

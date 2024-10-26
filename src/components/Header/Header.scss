@@ -4,11 +4,11 @@
 
 .header {
     @include flexy-box-align(column, center, center);
-    width: 100vw;
+    width: 100%;
     padding: 0rem $mobile-padding-between-components;
     @include tablet {
-        padding: 0rem $large-padding-between-components;
-        @include flexy-box-align(row, center, space-between)
+        @include flexy-box-align(row, center, space-between);
+        padding: $large-padding-between-components/2 $large-padding-between-components;
     }
 }
 .header__horizontal-container {
