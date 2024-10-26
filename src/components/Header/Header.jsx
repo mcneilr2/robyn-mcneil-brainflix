@@ -11,11 +11,14 @@ export default function Header() {
     <>
         <header className = "header">
             <Logo />
-            <div className="header__horizontal-container">
-                <SearchBar />
-                <Avatar />
+            <div className = "header__horizontal-container--large-display">
+                <div className="header__horizontal-container">
+                    <SearchBar />
+                    <Avatar screenSize="mobile" />
+                </div>
+                <Upload />
+                <Avatar screenSize="desktop" />
             </div>
-            <Upload />
         </header>
     </>
     )

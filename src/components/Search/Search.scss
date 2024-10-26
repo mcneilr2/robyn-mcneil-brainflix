@@ -3,11 +3,11 @@
 @use '../../styles/partials/global' as *;
 
 
-.header {
-    &__search-container * {
+.header__search {
+    &-container * {
         background-color: $alabaster;
     }
-    &__search-container {
+    &-container {
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $mercury;
@@ -21,7 +21,7 @@
             min-height: 2.5rem;
         }
     }
-    &__search-input {
+    &-input {
         min-height: 2.25rem;
         width: 100%;
         height: 100%;

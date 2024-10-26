@@ -3,11 +3,11 @@
 @use '../../styles/partials/global' as *;
 
 
-.header {
-    &__upload-container * {
+.header__upload {
+    &-container * {
         background-color: $brainflix-blue;
     }
-    &__upload-container {
+    &-container {
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $brainflix-blue;
@@ -16,13 +16,14 @@
         padding-left: 6px;
         margin: $mobile-padding-between-components;
         background-color: $brainflix-blue;
-        @include tablet{
-            min-height: 2.5rem;
+        @include tablet {
+            min-width: 9.375rem;
         }
+
     }
-    &__upload-button {
+    &-button {
         font-weight: 600;
-        height: 2.5rem;
+        height: 100%;
         width: 100%;
         border: none;
         color: $white;

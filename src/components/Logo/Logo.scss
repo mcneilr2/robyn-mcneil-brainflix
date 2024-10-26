@@ -1,7 +1,12 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
 
 .header__logo {
     max-height: 1.5625rem;
     max-width: 7.5rem;
     margin: $mobile-padding-between-components;
+    @include tablet {
+        margin: $large-padding-between-components;
+    }
 }

@@ -5,9 +5,17 @@
 .header {
     @include flexy-box-align(column, center, center);
     width: 100%;
-    padding: 0rem $mobile-padding-between-components;
+    @include tablet {
+        @include flexy-box-align(row, center, space-between)
+    }
 }
 .header__horizontal-container {
     @include flexy-box-align(row, center, center);
     width: 100%;
+    &--large-display{
+        @include flexy-box-align(column, center, center);
+        @include tablet {
+            @include flexy-box-align(row, center, end);
+        }
+    }
 }
