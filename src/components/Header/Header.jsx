@@ -1,7 +1,8 @@
-import Upload from '../Upload/Upload'
+// import Upload from '../Upload/Upload'
 import Logo from '../Logo/Logo'
 import SearchBar from '../Search/Search'
 import Avatar from '../Avatar/Avatar'
+import Upload from '../Upload/Upload'
 import './Header.scss'
 
 

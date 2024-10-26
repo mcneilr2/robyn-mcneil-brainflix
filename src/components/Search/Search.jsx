@@ -1,13 +1,14 @@
-import searchIcon from '../../assets/images/google_material_symbols/search_icon.svg';
 import './Search.scss'
+import searchIcon from '../../assets/icons/search.svg';
 
 export default function SearchBar() {
     return (
         <>
-            <div className="header__container">
-                <img className="header__icon" src={searchIcon} alt="search icon"></img>
-                <input className="header__search" defaultValue="Search"></input>
-            </div>        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <div className="header__search-container">
+            <img src={searchIcon} alt="search icon" />           
+            <input className="header__search-input" defaultValue="Search"></input>
+        </div>        
         </>
     )
 }

@@ -1,26 +1,30 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
-
+@use '../../styles/partials/global' as *;
 
 
 .header {
-    &__container {
+    &__upload-container * {
+        background-color: $brainflix-blue;
+    }
+    &__upload-container {
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
-        border: 1px solid $mercury;
-        min-height: 2.25rem;
-        min-width: 15rem;
+        border: 1px solid $brainflix-blue;
+        height: 2.5rem;
+        width: 100%;
         padding-left: 6px;
-        margin-right: 6px;
+        margin: $mobile-padding-between-components;
+        background-color: $brainflix-blue;
         @include tablet{
             min-height: 2.5rem;
         }
     }
-    &__upload {
-        min-height: 2.25rem;
-        min-width: 15rem;
-        height: 100%;
-        padding: 0rem .75rem;
+    &__upload-button {
+        font-weight: 600;
+        height: 2.5rem;
+        width: 100%;
         border: none;
+        color: $white;
     }
 }

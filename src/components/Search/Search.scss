@@ -1,26 +1,32 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
-
+@use '../../styles/partials/global' as *;
 
 
 .header {
-    &__container {
+    &__search-container * {
+        background-color: $alabaster;
+    }
+    &__search-container {
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $mercury;
         min-height: 2.25rem;
         min-width: 15rem;
+        width: 100%;
         padding-left: 6px;
-        margin-right: 6px;
+        margin-right: 12px;
+        background-color: $alabaster;
         @include tablet{
             min-height: 2.5rem;
         }
     }
-    &__search {
+    &__search-input {
         min-height: 2.25rem;
-        min-width: 15rem;
+        width: 100%;
         height: 100%;
-        padding: 0rem .75rem;
+        padding-left: .75rem;
         border: none;
+        color: $brainflix-black;
     }
 }

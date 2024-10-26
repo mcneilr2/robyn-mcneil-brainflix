@@ -18,13 +18,13 @@
 
 @font-face {
     font-family: 'Avenir';
-    src: url("/src/assets/font/AvenirNextLTPro-Regular.otf");
+    src: url("/src/assets/font/AvenirNextLTPro-Demi.otf");
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'Avenir';
-    src: url("/src/assets/font/AvenirNextLTPro-Regular.otf");
+    src: url("/src/assets/font/AvenirNextLTPro-Bold.otf");
     font-weight: 700;
 }
 
@@ -58,7 +58,7 @@ p {
     }
 }
 
-button, label, input {
+label {
     @include font-styling(.625rem, 700, 1.25rem);
     @include tablet {
         @include font-styling(.75rem, 700, 1.25rem);
