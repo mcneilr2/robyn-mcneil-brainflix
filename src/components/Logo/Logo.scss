@@ -7,6 +7,6 @@
     max-width: 7.5rem;
     margin: $mobile-padding-between-components;
     @include tablet {
-        margin: $large-padding-between-components;
+        margin: 0rem ;
     }
 }
