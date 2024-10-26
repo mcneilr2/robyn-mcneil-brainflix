@@ -1,11 +1,13 @@
-import data from '../../assets/data/video-details.json'
 import './VideoPlayer.scss'
 
-
-export default function VideoPlayer() {
+export default function VideoPlayer(props) {
+    function checkCurrentVideo(video) {
+        return video.id == props.activeVideoId
+    }
+    const activeVideoImageUrl = props.data.find(checkCurrentVideo).image;
     return (
         <>
-            <video className="video-player" controls poster={data[0].image} src={data[0].video}></video>
+            <video className="video-player" controls poster={activeVideoImageUrl}></video>
         </>
     )
 }
