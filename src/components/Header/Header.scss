@@ -5,19 +5,19 @@
 .header {
     @include flexy-box-align(column, center, center);
     width: 100%;
-    padding: 0rem $mobile-padding-between-components;
+    padding: 0rem;
     @include tablet {
         @include flexy-box-align(row, center, space-between);
         padding: $large-padding-between-components/2 $large-padding-between-components;
     }
-}
-.header__horizontal-container {
-    @include flexy-box-align(row, center, center);
-    width: 100%;
-    &--large-display{
-        @include flexy-box-align(column, center, center);
-        @include tablet {
-            @include flexy-box-align(row, center, end);
+    &__horizontal-container {
+        @include flexy-box-align(row, center, center);
+        width: 100%;
+        &--large-display{
+            @include flexy-box-align(column, center, center);
+            @include tablet {
+                @include flexy-box-align(row, center, end);
+            }
         }
     }
 }

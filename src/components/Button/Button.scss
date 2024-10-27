@@ -3,7 +3,7 @@
 @use '../../styles/partials/global' as *;
 
 
-.header__upload {
+.header__upload, .comments__add {
     &-container * {
         background-color: $brainflix-blue;
     }

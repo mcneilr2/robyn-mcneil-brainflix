@@ -1,0 +1,39 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+
+.comments-form {
+    @include flexy-box-align(row, start, left);
+    border-bottom: .0625rem solid $mercury;
+    box-sizing: border-box;
+    margin-right: $mobile-padding-between-components;
+    &__text-area {
+        width: 100%;
+        padding-right: $mobile-padding-between-components;
+        text-align: start;
+        min-height: 2.25rem*2;
+        border-radius: .25rem;
+        padding: .75rem;
+        margin-right: 1rem;
+        border: .0625rem solid $mercury;
+        background-color: $alabaster;
+        color: black;
+        &--text-area {
+          padding-bottom: 4rem;
+        }
+      }
+      &__input-label {
+        color: $silver;
+        font-weight: 600;
+        letter-spacing: .0625rem;  
+        width: 90%; 
+        @include flexy-box-align(column, start, start)
+      }
+      &__input-section {
+        width: 100%;
+      }
+      
+
+}
+

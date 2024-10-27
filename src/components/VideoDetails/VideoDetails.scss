@@ -1,0 +1,52 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+
+.current-video{
+    &__like-count {
+        font-weight: 600;
+        padding: 0rem $mobile-padding-between-components $mobile-padding-between-components $mobile-padding-between-components;
+    }
+    &__description {
+        padding: $mobile-padding-between-components;
+    }
+    &__interactions-section{
+        @include flexy-box-align(column, start, start);
+        padding-right: $mobile-padding-between-components*2;
+    }
+    &__channel, &__date {
+        padding-bottom: $mobile-padding-between-components;
+        @include flexy-box-align(row, center, left);
+    }
+    &__channel {
+        font-weight: 600;
+    }
+    &__date {
+        color: $silver;
+    }
+    &__details {
+        @include flexy-box-align(row, start, space-between);
+        padding: $mobile-padding-between-components $mobile-padding-between-components 0rem $mobile-padding-between-components;
+        border-bottom: .0625rem solid $mercury;
+    }
+    &__title {
+        padding: $mobile-padding-before-headline 0rem $mobile-padding-after-headline $mobile-padding-between-components;
+        border-bottom: .0625rem solid $mercury;
+        @include tablet {
+            padding: $large-padding-between-components;
+        }
+    }
+    &__name-date {
+        @include flexy-box-align(column, start, left);
+    }
+    &__views-container, &__likes-container {
+        @include flexy-box-align(row,start, left);
+        padding-bottom: $mobile-padding-between-components;
+    }
+    &__likes, &__views, &__interactions-icon {
+        padding-left: $mobile-padding-between-components;
+        color: $silver;
+    }
+
+}

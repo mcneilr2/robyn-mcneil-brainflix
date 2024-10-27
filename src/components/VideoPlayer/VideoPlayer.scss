@@ -1,7 +1,13 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
 
 .video-player {
-    width: 100%;
-    padding: 0rem $large-padding-between-components;
-    background: black;
+    width: 100vw;
+    padding: 0rem;
+    margin: 0rem;
+    @include tablet {
+        padding: 0rem $large-padding-between-components;
+        background: black;    
+    }
 }

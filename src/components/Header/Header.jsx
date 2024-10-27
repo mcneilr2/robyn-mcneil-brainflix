@@ -1,8 +1,7 @@
-// import Upload from '../Upload/Upload'
 import Logo from '../Logo/Logo'
 import SearchBar from '../Search/Search'
 import Avatar from '../Avatar/Avatar'
-import Upload from '../Upload/Upload'
+import Button from '../Button/Button'
 import './Header.scss'
 
 
@@ -14,9 +13,9 @@ export default function Header() {
             <div className = "header__horizontal-container--large-display">
                 <div className="header__horizontal-container">
                     <SearchBar />
-                    <Avatar screenSize="mobile" />
+                    <Avatar screenSize="mobile"/>
                 </div>
-                <Upload />
+                <Button isUpload = "true" />
                 <Avatar screenSize="desktop" />
             </div>
         </header>

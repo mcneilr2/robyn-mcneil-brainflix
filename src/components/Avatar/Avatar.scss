@@ -1,8 +1,10 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 
+
+
 .header__avatar{
-    &--mobile {
+    &--mobile, &--comments {
         object-fit: cover;
         border-radius: 50%;
         background-color: $mercury;
@@ -18,6 +20,7 @@
         object-fit: cover;
         border-radius: 50%;
         background-color: $mercury;
+        padding-right: $large-padding-between-components;
         max-height: 2.25rem;
         max-width: 2.25rem;
         @include tablet {
@@ -26,7 +29,7 @@
     }
 
     &-container {
-        &--mobile{
+        &--mobile, &--comments{
             box-sizing: content-box;
             display: flex;
             width: 2.25rem;
@@ -34,6 +37,9 @@
             @include tablet {
                 display: none;
             }
+        }
+        &--comments {
+            padding: $mobile-padding-between-components*1.5 $mobile-padding-between-components;
         }
         &--desktop{
             display: none;
@@ -44,8 +50,6 @@
                 display: flex;
             }
         }
-       
-       
     }
 
 }
