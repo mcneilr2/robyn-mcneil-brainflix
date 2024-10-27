@@ -8,7 +8,7 @@
     padding: 0rem;
     @include tablet {
         @include flexy-box-align(row, center, space-between);
-        padding: $large-padding-between-components/2 $large-padding-between-components;
+        padding: calc($large-padding-between-components/2) $large-padding-between-components;
     }
     &__horizontal-container {
         @include flexy-box-align(row, center, center);
