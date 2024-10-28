@@ -25,9 +25,7 @@ function App() {
       <CommentsForm activeVideoId={activeVideoId} data={data} />
       <CommentsList activeVideoId={activeVideoId} data={data} />
     </main>
-    {/* <aside>
-      <NextVideosList activeVideoId={activeVideoId} data={data} />
-    </aside> */}
+    <NextVideosList activeVideoId={activeVideoId} data={data} />
     </>
   )
 }

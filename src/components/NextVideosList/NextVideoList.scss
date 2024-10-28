@@ -1,0 +1,18 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+aside {
+    @include flexy-box-align(column, start, left);
+    margin: 0rem;
+    padding: $mobile-padding-between-components;
+}
+.next-videos {
+    padding-top: $mobile-padding-before-headline;
+    &__title {
+        color: $silver;
+        font-weight: 600;
+    }
+}
+
+

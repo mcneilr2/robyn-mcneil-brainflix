@@ -1,4 +1,5 @@
 import VideoCard from '../VideoCard/VideoCard'
+import './NextVideoList.scss'
 
 export default function NextVideosList(props) {
     let videosList = props.data.filter(removeCurrentVideo)
@@ -12,7 +13,7 @@ export default function NextVideosList(props) {
     console.log(videosList)
 
     return (
-        <section className="next-videos">
+        <aside className="next-videos">
             <h3 className ="next-videos__title">
                 NEXT VIDEOS
             </h3>
@@ -26,6 +27,6 @@ export default function NextVideosList(props) {
             />
             ))
             }
-        </section>
+        </aside>
     )
 }

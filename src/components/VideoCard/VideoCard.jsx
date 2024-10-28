@@ -6,13 +6,15 @@ export default function VideoCard(props) {
     return (
     <>
     <article className="video__card">
-        <img className="video__image" src={props.image} alt="next video" />
+        <div className="video__image-container">
+            <img className="video__image" src={props.image} alt="next video" />
+        </div>
         <div className="video__details">
             <p className="video__title">
                 {props.title}
             </p>
-            <p className="video__channel">
-                {props.channel}
+            <p className="video__name">
+                {props.name}
             </p>
         </div>
     </article>
