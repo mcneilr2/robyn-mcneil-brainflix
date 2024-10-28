@@ -8,6 +8,12 @@
     border-bottom: .0625rem solid $mercury;
     box-sizing: border-box;
     margin: 0rem $mobile-padding-between-components;
+    @include tablet {
+      padding-bottom: $large-padding-between-components;
+      margin: 0rem $large-padding-between-components;
+
+
+    }
     &__text-area {
         width: 100%;
         padding: 0.75rem;
@@ -34,6 +40,7 @@
             height: 4rem;
             flex-grow: 3;
             padding-right: 2rem;
+            
         }
       }
       &__input-section {

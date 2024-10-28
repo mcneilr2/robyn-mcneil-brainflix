@@ -1,6 +1,7 @@
 @use './styles/partials/mixins' as *;
 #root {
-    @include flexy-box-align(column, center, center);
+    @include flexy-box-align(column, start, center);
     width: 100vw;
     box-sizing: border-box;
+
 }

@@ -5,4 +5,7 @@
 
 .comments-list {
     margin: 0rem $mobile-padding-between-components;
+    @include tablet {
+        margin: 0rem $large-padding-between-components;
+    }
 }
