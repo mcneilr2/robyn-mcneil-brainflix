@@ -61,7 +61,6 @@ export default function VideoDetails(props) {
         <p className="current-video__like-count">
             {activeVideoLikeCount + " Comments"}
         </p>
-
     </>
     )
 }

@@ -2,7 +2,6 @@ import avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
 export default function Avatar(props) {
-    console.log(props)
     let modifier = ""
     if(props.section == "comments") {
         modifier="comments"
