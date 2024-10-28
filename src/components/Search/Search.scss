@@ -6,11 +6,13 @@
 .header__search {
     &-container * {
         background-color: $alabaster;
+        outline: none;
     }
     &-container {
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $mercury;
+        box-sizing: content-box;
         min-height: 2.25rem;
         min-width: 15rem;
         width: 100%;
@@ -28,5 +30,14 @@
         padding-left: .75rem;
         border: none;
         color: $brainflix-black;
+        outline: none;
+        &:focus {
+            border: .125rem solid $brainflix-blue;
+            border-radius: .25rem;
+        }
+        &:invalid {
+            border: .125rem solid red;
+            border-radius: .25rem;
+        }
     }
 }

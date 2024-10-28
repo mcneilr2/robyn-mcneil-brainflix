@@ -8,18 +8,26 @@
         height: 100%;
         background-color: $mercury;
         border-radius: .25rem;
-        margin: $mobile-padding-between-components $mobile-padding-between-components 0rem 0rem;
+        margin-right: $mobile-padding-between-components;
+        &-container {
+           @include flexy-box-align(row, center, center);
+        }
     }
     
     &__details {
-        @include flexy-box-align(column, start, space-around);
         width: 100%;
         height: 100%;
+        color: $brainflix-black;
     }
     
     &__card {
         @include flexy-box-align(row, center, left);
         width: 100%;
+        padding: $mobile-padding-between-components 0rem 0rem 0rem;
+    }
+    &__title {
+        padding-bottom: $mobile-padding-between-components;
+        font-weight: 600;
     }
 }
 

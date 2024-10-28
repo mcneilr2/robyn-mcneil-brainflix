@@ -15,6 +15,7 @@
 
     }
     &__text-area {
+      outline: none;
         width: 100%;
         padding: 0.75rem;
         text-align: start;
@@ -23,10 +24,18 @@
         margin-right: 1rem;
         border: .0625rem solid $mercury;
         background-color: $alabaster;
-        color: black;
+        color: $brainflix-black;
         @include tablet {
             min-height: 0rem;
             height: auto;
+        }
+        &:focus {
+          border: .125rem solid $brainflix-blue;
+          border-radius: .25rem;
+        }
+        &:invalid {
+          border: .125rem solid red;
+          border-radius: .25rem;
         }
       }
       &__input-label {
@@ -40,7 +49,6 @@
             height: 4rem;
             flex-grow: 3;
             padding-right: 2rem;
-            
         }
       }
       &__input-section {
@@ -48,6 +56,7 @@
         @include tablet {
             @include flexy-box-align(row, end, space-between);
         }
+
       }
       
 

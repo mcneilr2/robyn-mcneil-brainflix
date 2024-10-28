@@ -4,7 +4,7 @@
 
 
 .header__upload, .comments__add {
-    &-container * {
+    &-container *, &-container, &-button, &-icon {
         background-color: $brainflix-blue;
     }
     &-container {
@@ -15,7 +15,6 @@
         width: 97%;
         padding-left: 6px;
         margin: $mobile-padding-between-components 0rem;
-        background-color: $brainflix-blue;
         @include tablet {
             min-width: 9.375rem;
             margin: 0rem $large-padding-between-components/2;
@@ -28,6 +27,11 @@
         width: 100%;
         border: none;
         color: $white;
+        &:hover {
+            background-color: $brainflix-darkblue;
+            
+        }
+
     }
 }
 
