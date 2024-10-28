@@ -6,12 +6,19 @@ aside {
     @include flexy-box-align(column, start, left);
     margin: 0rem;
     padding: $mobile-padding-between-components;
+    @include tablet {
+        padding: $large-padding-between-components;
+    }
 }
 .next-videos {
     padding-top: $mobile-padding-before-headline;
     &__title {
         color: $silver;
         font-weight: 600;
+    }
+    @include tablet {
+        width: 50%;
+        padding-top: $large-padding-between-components;
     }
 }
 

@@ -12,6 +12,9 @@
         &-container {
            @include flexy-box-align(row, center, center);
         }
+        @include tablet {
+            width: 20vw;
+        }
     }
     
     &__details {
@@ -24,6 +27,9 @@
         @include flexy-box-align(row, center, left);
         width: 100%;
         padding: $mobile-padding-between-components 0rem 0rem 0rem;
+        @include tablet {
+            padding: $large-padding-between-components 0rem 0rem 0rem;
+        }
     }
     &__title {
         padding-bottom: $mobile-padding-between-components;
