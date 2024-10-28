@@ -23,7 +23,7 @@ function App() {
       <VideoPlayer activeVideoId={activeVideoId} data={data} />
       <VideoDetails activeVideoId={activeVideoId} data={data} />
       <CommentsForm activeVideoId={activeVideoId} data={data} />
-      {/* <CommentsList activeVideoId={activeVideoId} data={data} /> */}
+      <CommentsList activeVideoId={activeVideoId} data={data} />
     </main>
     {/* <aside>
       <NextVideosList activeVideoId={activeVideoId} data={data} />

@@ -1,4 +1,64 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+
 .video__image {
     width: 10px;
     height: 10px;
 }
+
+.video-comment {
+    @include flexy-box-align(column, left, center);
+    box-sizing: border-box;
+    padding: 0rem $mobile-padding-between-components $mobile-padding-between-components $mobile-padding-between-components;
+    @include tablet {
+      padding: 0rem ($large-padding-between-components + 4rem) $large-padding-between-components ($large-padding-between-components + 4rem);
+    }
+    @include desktop {
+      margin: 0rem 20rem;
+    }
+    &__card {
+      @include flexy-box-align(row, start, left);
+      border-bottom: .0625rem solid $mercury;
+      padding: $mobile-padding-between-components 0rem;
+      width: 100%;
+      &:hover {
+        background-color: $alabaster;
+      }
+    }
+    &__image {
+      border-radius: 50%;
+      border: none;
+      object-fit: cover;
+      background-color: $mercury;
+      min-width: 2rem;
+      min-height: 2rem;
+      max-width: 2.25rem;
+      max-height: 2.25rem;
+      @include tablet {
+        max-height: 3rem;
+        max-width: 3rem;
+        height: 2.75rem;
+        width: 2.75rem;
+      }
+    }
+    &__text, &__date, &__name {
+      margin: 0rem;    
+    }
+    &__date {
+      color: $silver;
+    }
+    &__text-container {
+      width: 100%;
+    }
+    &__image-container {
+      display: flex;
+      padding-right: $mobile-padding-between-components;
+    }
+    &__header-container {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: $mobile-padding-between-components/2;
+    }
+  }

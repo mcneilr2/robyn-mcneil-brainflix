@@ -43,7 +43,7 @@
             }
         }
         &--comments {
-            padding: $mobile-padding-between-components*1.5 $mobile-padding-between-components;
+            padding: $mobile-padding-between-components*1.5 $mobile-padding-between-components 0rem 0rem;
         }
         &--desktop{
             display: none;

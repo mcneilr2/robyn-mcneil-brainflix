@@ -1,0 +1,8 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+
+.comments-list {
+    margin: 0rem $mobile-padding-between-components;
+}

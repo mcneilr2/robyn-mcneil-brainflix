@@ -1,5 +1,4 @@
 @use './styles/partials/mixins' as *;
 #root {
     @include flexy-box-align(column, center, center);
-    flex-wrap: wrap;
 }
