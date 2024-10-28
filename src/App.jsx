@@ -19,7 +19,7 @@ function App() {
     <article className = "current-video__section">
       <VideoPlayer activeVideoId={activeVideoId} data={data} />
       <VideoDetails activeVideoId={activeVideoId} data={data} />
-      {/* <CommentsForm activeVideoId={activeVideoId} data={data} /> */}
+      <CommentsForm activeVideoId={activeVideoId} data={data} />
     </article>
     </>
   )
