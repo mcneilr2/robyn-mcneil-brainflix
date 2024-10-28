@@ -11,8 +11,9 @@
     @include tablet {
       padding-bottom: $large-padding-between-components;
       margin: 0rem $large-padding-between-components;
-
-
+    }
+    @include desktop {
+      margin: 0rem 6rem;
     }
     &__text-area {
       outline: none;

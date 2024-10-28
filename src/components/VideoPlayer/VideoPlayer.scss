@@ -1,5 +1,6 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
 
 
 .video-player {
@@ -9,5 +10,9 @@
     @include tablet {
         padding: 0rem $large-padding-between-components;
         background: black;    
+    }
+    @include desktop {
+        padding: 0rem 15rem;
+        width: 100vw;
     }
 }

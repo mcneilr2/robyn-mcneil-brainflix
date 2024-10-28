@@ -10,11 +10,17 @@
         @include tablet {
             padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) $large-padding-between-components ;
         }
+        @include desktop {
+            padding: $large-padding-between-components 6rem;
+        }
     }
     &__description {
         padding: $mobile-padding-between-components;
         @include tablet {
             padding: $large-padding-between-components;
+        }
+        @include desktop {
+            padding: 1rem 6rem 0rem 6rem;
         }
     }
     &__interactions-section{
@@ -43,8 +49,10 @@
         border-bottom: .0625rem solid $mercury;
         margin: 0rem $mobile-padding-between-components;
         @include tablet {
-            padding-top: $large-padding-after-headline;
             margin: 0rem $large-padding-between-components;
+        }
+        @include desktop {
+            margin: 0rem 6rem;
         }
     }
     &__title {
@@ -55,6 +63,9 @@
             padding: $large-padding-between-components 0rem 0rem 0rem;
             border: none;
             margin: 0rem $large-padding-between-components;
+        }
+        @include desktop {
+            margin: 0rem 6rem;
         }
     }
     &__name-date {

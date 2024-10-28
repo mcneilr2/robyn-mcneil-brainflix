@@ -15,10 +15,6 @@ export default function CommentsForm(props) {
                 <Avatar screenSize = "mobile" section = "comments"/>
             </div>
             <div className="comments-form__input-section">
-                {/* <label className="comments-form__input-label">
-                    NAME
-                    <input className="comments-form__input" type="text"placeholder="Enter your name" />
-                </label> */}
                 <label className="comments-form__input-label">
                     JOIN THE CONVERSATION
                     <textarea className="comments-form__text-area" type="textarea" defaultValue="Add a new comment"></textarea>

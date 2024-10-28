@@ -10,6 +10,9 @@
         @include flexy-box-align(row, center, space-between);
         padding: calc($large-padding-between-components/2) $large-padding-between-components;
     }
+    @include desktop {
+        width: 120%;
+    }
     &__horizontal-container {
         @include flexy-box-align(row, center, center);
         width: 100%;
