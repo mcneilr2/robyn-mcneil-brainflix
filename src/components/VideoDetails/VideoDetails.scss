@@ -7,17 +7,29 @@
     &__like-count {
         font-weight: 600;
         padding: 0rem $mobile-padding-between-components $mobile-padding-between-components $mobile-padding-between-components;
+        @include tablet {
+            padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) $large-padding-between-components ;
+        }
     }
     &__description {
         padding: $mobile-padding-between-components;
+        @include tablet {
+            padding: $large-padding-between-components;
+        }
     }
     &__interactions-section{
         @include flexy-box-align(column, start, start);
         padding-right: $mobile-padding-between-components*2;
+        @include tablet {
+            @include flexy-box-align(row, center, center)
+        }
     }
     &__channel, &__date {
         padding-bottom: $mobile-padding-between-components;
         @include flexy-box-align(row, center, left);
+        @include tablet {
+            padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) 0rem;
+        }
     }
     &__channel {
         font-weight: 600;
@@ -27,25 +39,39 @@
     }
     &__details {
         @include flexy-box-align(row, start, space-between);
-        padding: $mobile-padding-between-components $mobile-padding-between-components 0rem $mobile-padding-between-components;
+        padding-top: $mobile-padding-between-components;
         border-bottom: .0625rem solid $mercury;
+        margin: 0rem $mobile-padding-between-components;
+        @include tablet {
+            padding-top: $large-padding-after-headline;
+            margin: 0rem $large-padding-between-components;
+        }
     }
     &__title {
-        padding: $mobile-padding-before-headline 0rem $mobile-padding-after-headline $mobile-padding-between-components;
+        padding: $mobile-padding-before-headline 0rem $mobile-padding-after-headline 0rem;
+        margin: 0rem $mobile-padding-between-components;
         border-bottom: .0625rem solid $mercury;
         @include tablet {
-            padding: $large-padding-between-components;
+            padding: $large-padding-between-components 0rem 0rem 0rem;
+            border: none;
+            margin: 0rem $large-padding-between-components;
         }
     }
     &__name-date {
         @include flexy-box-align(column, start, left);
+        @include tablet {
+            @include flexy-box-align(row, center, center)
+        }
     }
     &__views-container, &__likes-container {
         @include flexy-box-align(row,start, left);
         padding-bottom: $mobile-padding-between-components;
+        @include tablet {
+            padding: 0rem 0rem 0rem $large-padding-between-components;
+        }
     }
     &__likes, &__views, &__interactions-icon {
-        padding-left: $mobile-padding-between-components;
+        padding:0rem calc($mobile-padding-between-components/2) 0rem 0rem;
         color: $silver;
     }
 

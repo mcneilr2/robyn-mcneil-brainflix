@@ -30,3 +30,13 @@
         color: $white;
     }
 }
+
+.comments__add {
+    @include tablet{
+        &-container {
+            width: auto;
+            min-width: 9.375rem;
+            padding-right: 2rem;
+        }
+    }
+}

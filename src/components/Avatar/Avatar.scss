@@ -10,17 +10,19 @@
         background-color: $mercury;
         max-height: 2.25rem;
         max-width: 2.25rem;
+    }
+    &--mobile{
         @include tablet {
             display: none;
         }
     }
+
 
     &--desktop {
         display: none;
         object-fit: cover;
         border-radius: 50%;
         background-color: $mercury;
-        padding-right: $large-padding-between-components;
         max-height: 2.25rem;
         max-width: 2.25rem;
         @include tablet {
@@ -34,6 +36,8 @@
             display: flex;
             width: 2.25rem;
             height: 2.25rem;
+        }
+        &--mobile {
             @include tablet {
                 display: none;
             }

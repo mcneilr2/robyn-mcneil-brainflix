@@ -19,8 +19,9 @@
         border: .0625rem solid $mercury;
         background-color: $alabaster;
         color: black;
-        &--text-area {
-          padding-bottom: 4rem;
+        @include tablet {
+            min-height: 0rem;
+            height: auto;
         }
       }
       &__input-label {
@@ -28,10 +29,19 @@
         font-weight: 600;
         letter-spacing: .0625rem;  
         width: 90%; 
-        @include flexy-box-align(column, start, start)
+        @include flexy-box-align(column, start, start);
+        @include tablet {
+            width: auto;
+            height: 4rem;
+            flex-grow: 3;
+            padding-right: 2rem;
+        }
       }
       &__input-section {
         width: 100%;
+        @include tablet {
+            @include flexy-box-align(row, end, space-between);
+        }
       }
       
 
