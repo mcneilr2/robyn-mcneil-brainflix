@@ -21,7 +21,7 @@ export default function CommentsForm(props) {
                 </label> */}
                 <label className="comments-form__input-label">
                     JOIN THE CONVERSATION
-                    <textarea className="comments-form__text-area" type="textarea" value="Add a new comment"></textarea>
+                    <textarea className="comments-form__text-area" type="textarea" defaultValue="Add a new comment"></textarea>
                 </label>
                 <Button isUpload = "false" />
             </div>

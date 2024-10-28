@@ -10,7 +10,7 @@ import NextVideosList from './components/NextVideosList/NextVideoList'
 
 
 function App() {
-  function changeActiveVideo(id){
+  function changeActiveVideoId(id){
     setActiveVideoId(id)
   }
 
@@ -20,12 +20,12 @@ function App() {
     <>
     <Header />
     <main className = "current-video__section">
-      <VideoPlayer activeVideoId={activeVideoId} data={data} />
+      <VideoPlayer activeVideoId={activeVideoId} data={data}  />
       <VideoDetails activeVideoId={activeVideoId} data={data} />
       <CommentsForm activeVideoId={activeVideoId} data={data} />
       <CommentsList activeVideoId={activeVideoId} data={data} />
     </main>
-    <NextVideosList activeVideoId={activeVideoId} data={data} />
+    <NextVideosList activeVideoId={activeVideoId} data={data} changeActiveVideoId = {changeActiveVideoId} />
     </>
   )
 }

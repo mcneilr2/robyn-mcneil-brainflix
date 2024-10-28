@@ -10,8 +10,6 @@ export default function NextVideosList(props) {
             }
         else {return true}
     }
-    console.log(videosList)
-
     return (
         <aside className="next-videos">
             <h3 className ="next-videos__title">
@@ -24,6 +22,7 @@ export default function NextVideosList(props) {
             title = {video.title}
             name = {video.channel}
             image = {video.image}
+            changeActiveVideoId = {props.changeActiveVideoId}
             />
             ))
             }

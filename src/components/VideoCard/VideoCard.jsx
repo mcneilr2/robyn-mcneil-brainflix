@@ -1,11 +1,13 @@
 import './VideoCard.scss'
 
 
-export default function VideoCard(props) {
-    console.log(props)
+export default function VideoCard(props) { 
+    const clickHandler = () => {
+        props.changeActiveVideoId(props.id)
+    }
     return (
     <>
-    <article className="video__card">
+    <article className="video__card" onClick = {clickHandler}>
         <div className="video__image-container">
             <img className="video__image" src={props.image} alt="next video" />
         </div>
