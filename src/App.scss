@@ -5,7 +5,15 @@
 
 #root {
     @include flexy-box-align(column, start, center);
-    width: 100vw;
     box-sizing: border-box;
+}
 
+.main-content--desktop {
+    width: 108vw;
+    @include desktop {
+        @include flexy-box-align(row, start, start);
+        border: 5px dashed red;
+        width: 137%;
+        height: 100vh;
+    }
 }

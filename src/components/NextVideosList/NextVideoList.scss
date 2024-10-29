@@ -5,7 +5,7 @@
 aside {
     @include flexy-box-align(column, start, left);
     margin: 0rem;
-    padding: $mobile-padding-between-components;
+    padding: $mobile-padding-between-components 0rem $mobile-padding-between-components $mobile-padding-between-components;
     @include tablet {
         padding: $large-padding-between-components;
     }
@@ -20,6 +20,7 @@ aside {
         width: 50%;
         padding-top: $large-padding-between-components;
     }
+
 }
 
 

@@ -19,14 +19,16 @@ function App() {
   return (
     <>
     <Header />
-    <main className = "current-video__section">
-      <VideoPlayer activeVideoId={activeVideoId} data={data}  />
-      <VideoDetails activeVideoId={activeVideoId} data={data} />
-      <CommentsForm activeVideoId={activeVideoId} data={data} />
-      <CommentsList activeVideoId={activeVideoId} data={data} />
-    </main>
-    <NextVideosList activeVideoId={activeVideoId} data={data} changeActiveVideoId = {changeActiveVideoId} />
-    </>
+    <VideoPlayer activeVideoId={activeVideoId} data={data}  />
+    <section className = "main-content--desktop">
+      <article className = "current-video__section">
+        <VideoDetails activeVideoId={activeVideoId} data={data} />
+        <CommentsForm activeVideoId={activeVideoId} data={data} />
+        <CommentsList activeVideoId={activeVideoId} data={data} />
+      </article>
+      <NextVideosList activeVideoId={activeVideoId} data={data} changeActiveVideoId = {changeActiveVideoId} />
+    </section>
+ </>
   )
 }
 

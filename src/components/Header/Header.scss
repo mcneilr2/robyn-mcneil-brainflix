@@ -4,7 +4,7 @@
 
 .header {
     @include flexy-box-align(column, center, center);
-    width: 100%;
+    width: 100vw;
     padding: 0rem;
     @include tablet {
         @include flexy-box-align(row, center, space-between);
