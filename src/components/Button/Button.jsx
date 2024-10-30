@@ -2,9 +2,11 @@ import uploadIcon from '../../assets/icons/upload.svg';
 import addCommentsIcon from '../../assets/icons/add_comment.svg';
 import './Button.scss'
 
-export default function Button(props) {
-    let isUpload = true
-    if(props.isUpload == "false") {isUpload=false} else {isUpload=true}
+export default function Button({functionality}) {
+    let isUpload = false
+    if(functionality == "upload") {
+        isUpload=true
+    } else {isUpload=false}
     return (
     <>
         <div className={isUpload ? "header__upload-container" : "comments__add-container"}>

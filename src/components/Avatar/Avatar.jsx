@@ -1,12 +1,12 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
-export default function Avatar(props) {
+export default function Avatar({ section, screenSize }) {
     let modifier = ""
-    if(props.section == "comments") {
+    if(section == "comments") {
         modifier="comments"
     } else {
-        modifier=props.screenSize
+        modifier=screenSize
     }   
     return (
         <>
