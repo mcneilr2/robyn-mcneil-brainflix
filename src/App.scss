@@ -9,11 +9,8 @@
 }
 
 .main-content--desktop {
-    width: 108vw;
-    @include desktop {
+     @include desktop {
         @include flexy-box-align(row, start, start);
-        border: 5px dashed red;
-        width: 137%;
-        height: 100vh;
+        height: auto;
     }
 }

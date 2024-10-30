@@ -9,6 +9,7 @@
         margin: 0rem $large-padding-between-components;
     }
     @include desktop {
-        margin: 0rem 6rem;
+        margin: 0rem 0rem 0rem 6rem;
+        @include flexy-box-align(column, start, center)
     }
 }

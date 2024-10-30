@@ -4,7 +4,7 @@ import Button from '../Button/Button'
 
 
 
-export default function CommentsForm(props) {
+export default function CommentsForm() {
     function submitHandler(submitData) {
         submitData.preventDefault()
     }
@@ -17,7 +17,7 @@ export default function CommentsForm(props) {
             <div className="comments-form__input-section">
                 <label className="comments-form__input-label">
                     JOIN THE CONVERSATION
-                    <textarea className="comments-form__text-area" type="textarea" defaultValue="Add a new comment"></textarea>
+                    <textarea className="comments-form__text-area" type="textarea" placeholder = "Add a new comment"></textarea>
                 </label>
                 <Button isUpload = "false" />
             </div>

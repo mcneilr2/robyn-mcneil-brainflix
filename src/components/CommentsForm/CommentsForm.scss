@@ -13,16 +13,15 @@
       margin: 0rem $large-padding-between-components;
     }
     @include desktop {
-      margin: 0rem 6rem;
+      margin: 0rem 0rem 0rem 6rem;
     }
     &__text-area {
       outline: none;
         width: 100%;
+        height: 6rem;
         padding: 0.75rem;
         text-align: start;
-        min-height: 2.25rem*2;
         border-radius: .25rem;
-        margin-right: 1rem;
         border: .0625rem solid $mercury;
         background-color: $alabaster;
         color: $brainflix-black;
@@ -43,7 +42,6 @@
         color: $silver;
         font-weight: 600;
         letter-spacing: .0625rem;  
-        width: 90%; 
         @include flexy-box-align(column, start, start);
         @include tablet {
             width: auto;

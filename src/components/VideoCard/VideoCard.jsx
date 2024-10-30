@@ -5,6 +5,9 @@ export default function VideoCard(props) {
     const clickHandler = () => {
         props.changeActiveVideoId(props.id)
     }
+
+    // // <Link to={`/videos/${}`}>
+    // // </Link>
     return (
     <>
     <article className="video__card" onClick = {clickHandler}>

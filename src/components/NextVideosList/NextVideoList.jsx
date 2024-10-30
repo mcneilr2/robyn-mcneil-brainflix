@@ -1,10 +1,10 @@
 import VideoCard from '../VideoCard/VideoCard'
 import './NextVideoList.scss'
 
-export default function NextVideosList(props) {
-    let videosList = props.data.filter(removeCurrentVideo)
+export default function NextVideosList({ activeVideo, data, setActiveVideo}) {
+    let videosList = data.filter(removeCurrentVideo)
     function removeCurrentVideo(video) {
-        if (video.id == props.activeVideoId)
+        if (video.id == activeVideo)
             {
                 return false
             }
@@ -22,7 +22,7 @@ export default function NextVideosList(props) {
             title = {video.title}
             name = {video.channel}
             image = {video.image}
-            changeActiveVideoId = {props.changeActiveVideoId}
+            changeActiveVideoId = {setActiveVideo}
             />
             ))
             }

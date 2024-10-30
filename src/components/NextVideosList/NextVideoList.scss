@@ -2,24 +2,20 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/global' as *;
 
-aside {
+
+.next-videos {
     @include flexy-box-align(column, start, left);
     margin: 0rem;
-    padding: $mobile-padding-between-components 0rem $mobile-padding-between-components $mobile-padding-between-components;
-    @include tablet {
-        padding: $large-padding-between-components;
-    }
-}
-.next-videos {
-    padding-top: $mobile-padding-before-headline;
+    padding: $mobile-padding-between-components;
     &__title {
         color: $silver;
         font-weight: 600;
+        padding-bottom: $mobile-padding-between-components;
     }
     @include tablet {
-        width: 50%;
         padding-top: $large-padding-between-components;
     }
+
 
 }
 

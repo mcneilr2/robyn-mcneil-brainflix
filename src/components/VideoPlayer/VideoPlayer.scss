@@ -4,15 +4,11 @@
 
 
 .video-player {
-    width: 100vw;
-    padding: 0rem;
-    margin: 0rem;
+    // height: 80vh;
+    width: 100%;
     @include tablet {
         padding: 0rem $large-padding-between-components;
         background: black;    
     }
-    @include desktop {
-        padding: 0rem 15rem;
-        width: 100vw;
-    }
+
 }

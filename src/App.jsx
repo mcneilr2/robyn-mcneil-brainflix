@@ -1,34 +1,20 @@
 import { useState } from 'react'
-import data from './assets/data/video-details.json'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.scss'
-import Header from './components/Header/Header'
-import VideoPlayer from './components/VideoPlayer/VideoPlayer'
-import VideoDetails from './components/VideoDetails/VideoDetails'
-import CommentsForm from './components/CommentsForm/CommentsForm'
-import CommentsList from './components/CommentsList/CommentsList'
-import NextVideosList from './components/NextVideosList/NextVideoList'
+import Header from './components/Header/Header';
+import HomePage from './pages/HomePage/HomePage';
+
 
 
 function App() {
-  function changeActiveVideoId(id){
-    setActiveVideoId(id)
-  }
-
-  const [activeVideoId, setActiveVideoId] = useState(data[0].id)
 
   return (
-    <>
-    <Header />
-    <VideoPlayer activeVideoId={activeVideoId} data={data}  />
-    <section className = "main-content--desktop">
-      <article className = "current-video__section">
-        <VideoDetails activeVideoId={activeVideoId} data={data} />
-        <CommentsForm activeVideoId={activeVideoId} data={data} />
-        <CommentsList activeVideoId={activeVideoId} data={data} />
-      </article>
-      <NextVideosList activeVideoId={activeVideoId} data={data} changeActiveVideoId = {changeActiveVideoId} />
-    </section>
- </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element = {<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

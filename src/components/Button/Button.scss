@@ -13,12 +13,12 @@
         border-radius: .25rem;
         border: 1px solid $brainflix-blue;
         height: 2.5rem;
-        width: 97%;
-        padding-left: 6px;
+        width: 100%;
+        padding-left: .75rem;
         margin: $mobile-padding-between-components 0rem;
         @include tablet {
             min-width: 9.375rem;
-            margin: 0rem $large-padding-between-components/2;
+            margin: 0rem calc($large-padding-between-components/2);
         }
 
     }
@@ -28,6 +28,7 @@
         width: 100%;
         border: none;
         color: $white;
+        padding-right: 2rem;
         &:hover {
             background-color: $brainflix-darkblue;
             

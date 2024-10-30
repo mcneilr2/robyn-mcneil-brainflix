@@ -1,10 +1,7 @@
 import CommentCard from '../CommentCard/CommentCard'
 import './CommentsList.scss'
-export default function CommentsList(props) {
-    const currentComments = props.data.find(checkCurrentVideo).comments;
-    function checkCurrentVideo(video) {
-        return video.id == props.activeVideoId
-    }
+export default function CommentsList({ activeVideo }) {
+    const currentComments = activeVideo.comments
     return (
         <section className="comments-list">
             {currentComments.map((comment) => (
