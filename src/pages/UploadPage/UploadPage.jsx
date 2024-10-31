@@ -7,7 +7,8 @@ import './UploadPage.scss'
 function UploadPage() {
 
   return (
-    <>    <section className = "main-content--desktop">
+    <>    
+    <section >
         TestPage
     </section>
     </>

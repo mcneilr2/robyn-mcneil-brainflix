@@ -9,12 +9,12 @@ import CommentsList from '../../components/CommentsList/CommentsList'
 import NextVideosList from '../../components/NextVideosList/NextVideoList'
 
 
-function HomePage() {
+export default function HomePage() {
     const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
     const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
     
     const [videos, setVideos] = useState ([])
-    const [defaultVideo, setDefaultVideo] = useState([])
+    const [activeVideo, setActiveVideo] = useState([])
 
 
     const getVideos = async () => {
@@ -28,7 +28,7 @@ function HomePage() {
 
         try {
             const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${API_KEY}`)
-            setDefaultVideo(response.data)
+            setActiveVideo(response.data)
         } catch(error) {
             console.error("Error fetching video data", error)
         }
@@ -41,17 +41,15 @@ function HomePage() {
 
     return (
     <>
-        <VideoPlayer activeVideo = {defaultVideo}  />
+        <VideoPlayer activeVideo = {activeVideo}  />
         <section className = "main-content">
             <article className = "current-video__section">
-                <VideoDetails activeVideo = {defaultVideo} />
-                {/* <CommentsForm activeVideo={activeVideo} />
-                <CommentsList activeVideo={activeVideo} /> */}
+                <VideoDetails activeVideo = {activeVideo} />
+                <CommentsForm activeVideo={activeVideo} />
+                <CommentsList activeVideo={activeVideo} />
             </article>
-            {/* <NextVideosList activeVideo={activeVideo} data={data} changeActiveVideo = {setActiveVideo} /> */}
+            <NextVideosList activeVideo={activeVideo} setActiveVideo = {setActiveVideo} videos={videos} />
         </section>
     </>
     )
 }
-
-export default HomePage

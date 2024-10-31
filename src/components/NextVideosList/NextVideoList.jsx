@@ -1,8 +1,9 @@
 import VideoCard from '../VideoCard/VideoCard'
 import './NextVideoList.scss'
 
-export default function NextVideosList({ activeVideo, data, setActiveVideo}) {
-    let videosList = data.filter(removeCurrentVideo)
+export default function NextVideosList({ activeVideo, setActiveVideo, videos }) {
+    console.log(setActiveVideo, activeVideo, videos)
+    let videosList = videos.filter(removeCurrentVideo)
     function removeCurrentVideo(video) {
         if (video.id == activeVideo)
             {
