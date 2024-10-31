@@ -4,11 +4,9 @@
 
 
 .video-player {
-    // height: 80vh;
     width: 100%;
     @include tablet {
         padding: 0rem $large-padding-between-components;
         background: black;    
     }
-
 }
