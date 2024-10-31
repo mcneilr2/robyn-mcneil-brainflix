@@ -18,10 +18,10 @@ export default function Header() {
                         </Link>                      
                         <input className="header__search-input" defaultValue="Search"></input>
                     </div> 
-                        <Avatar screenSize="mobile"/>
+                        <Avatar visibleOnMedia="small"/>
                     </div>
                 <Button functionality="upload" />
-                <Avatar screenSize="desktop" />
+                <Avatar visibleOnMedia="large" />
             </div>
         </header>
     )

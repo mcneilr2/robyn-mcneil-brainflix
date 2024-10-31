@@ -1,17 +1,12 @@
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
-export default function Avatar({ section, screenSize }) {
-    let modifier = ""
-    if(section == "comments") {
-        modifier="comments"
-    } else {
-        modifier=screenSize
-    }   
+export default function Avatar({ visibleOnMedia }) {
+    console.log(visibleOnMedia)
     return (
         <>
-        <div className={'header__avatar-container--' + modifier}>
-            <img className={'header__avatar--' + modifier} src={avatar} alt="Mohan Muruge side profile">
+        <div className={'header__avatar-container--'+ visibleOnMedia}>
+            <img className={'header__avatar--' + visibleOnMedia} src={avatar} alt="Mohan Muruge side profile">
             </img>      
         </div>
         </>

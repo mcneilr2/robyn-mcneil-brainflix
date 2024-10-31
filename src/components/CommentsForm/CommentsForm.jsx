@@ -12,7 +12,7 @@ export default function CommentsForm() {
     <>
         <form className="comments-form" id="comment-submission__form">
             <div className="comments-form__img-section">
-                <Avatar screenSize = "mobile" section = "comments"/>
+                <Avatar visibleOnMedia="all"/>
             </div>
             <div className="comments-form__input-section">
                 <label className="comments-form__input-label">

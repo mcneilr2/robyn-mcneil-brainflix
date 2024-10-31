@@ -3,48 +3,35 @@
 
 
 
-.header__avatar{
-    &--mobile, &--comments, &--desktop {
+.header__avatar {
+    &--small, &--large, &--all {
         object-fit: cover;
         border-radius: 50%;
         background-color: $mercury;
         max-height: 2.25rem;
         max-width: 2.25rem;
     }
-    &--mobile{
-        @include tablet {
-            display: none;
-        }
-    }
-
-    &--desktop {
-        display: none;
-        @include tablet {
-            display: block;
-        }
-    }
-
     &-container {
-        &--mobile, &--comments, &--desktop{
+        &--small, &--large, &--all {
             box-sizing: content-box;
             display: flex;
             width: 2.25rem;
             height: 2.25rem;
         }
-        &--mobile {
-            @include tablet {
-                display: none;
-            }
-        }
-        &--comments {
-            padding: $mobile-padding-between-components*1.5 $mobile-padding-between-components 0rem 0rem;
-        }
-        &--desktop{
+    }
+
+    &-container--small, &--small {
+        @include tablet {
             display: none;
-            @include tablet {
-                display: flex;
-            }
         }
     }
 
+    &-container--large, &--large {
+        display: none;
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    
 }
