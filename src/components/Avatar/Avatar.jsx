@@ -2,7 +2,6 @@ import avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Avatar.scss'
 
 export default function Avatar({ visibleOnMedia }) {
-    console.log(visibleOnMedia)
     return (
         <>
         <div className={'header__avatar-container--'+ visibleOnMedia}>
