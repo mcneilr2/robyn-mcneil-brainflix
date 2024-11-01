@@ -9,4 +9,7 @@
         padding: 0rem $large-padding-between-components;
         background: black;    
     }
+    @include desktop {
+        padding: 0rem $desktop-padding*2;
+    }
 }

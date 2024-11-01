@@ -10,12 +10,19 @@
     @include tablet {
         padding: $large-padding-between-components;
     }
+    @include desktop {
+        padding: 2rem 0rem 0rem 2rem;
+        border-left: .125rem solid $mercury;
+    }
     &__title {
         color: $silver;
         font-weight: 600;
         padding-bottom: $mobile-padding-between-components;
         @include tablet {
             padding-bottom: $large-padding-between-components;
+        }
+        @include desktop {
+            padding-bottom: 1rem;
         }
     }
 }
@@ -27,6 +34,9 @@
         width: 30vw;
         @include tablet {
             width: 18vw;
+        }
+        @include desktop {
+            width: 10vw
         }
     }
     
@@ -44,6 +54,7 @@
         @include flexy-box-align(row, center, center);
         width: 100%;
         margin-bottom: .5rem;
+
     }
     &__title {
         font-weight: 600;

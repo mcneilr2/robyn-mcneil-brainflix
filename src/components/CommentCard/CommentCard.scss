@@ -5,7 +5,7 @@
 .video-comment {
     &__card {
       @include flexy-box-align(row, start, left);
-      border-bottom: .0625rem solid $mercury;
+      border-top: .0625rem solid $mercury;
       padding: $mobile-padding-between-components 0rem;
 
       @include desktop {
