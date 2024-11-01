@@ -9,20 +9,20 @@ import './Header.scss'
 export default function Header() {
     return (
         <header className = "header">
-        <img className="header__logo" src={logo} alt="brainflix logo" />
-        <div className = "header__horizontal-container--large-display">
-                <div className="header__horizontal-container">
-                    <div className="header__search-container">
-                        <Link to="/" className="header__link">
-                            <img src={searchIcon} alt="search icon" />           
-                        </Link>                      
-                        <input className="header__search-input" defaultValue="Search"></input>
-                    </div> 
-                        <Avatar visibleOnMedia="small"/>
+        <Link to="/" className="header__link">
+            <img className="header__logo" src={logo} alt="brainflix logo" />
+        </Link>
+            <div className = "header__horizontal-container--large-display">
+                    <div className="header__horizontal-container">
+                        <div className="header__search-container">
+                                <img src={searchIcon} alt="search icon" />                                 
+                            <input className="header__search-input" defaultValue="Search"></input>
+                        </div> 
+                            <Avatar visibleOnMedia="small"/>
                     </div>
-                <Button functionality="upload" />
-                <Avatar visibleOnMedia="large" />
-            </div>
-        </header>
+                    <Button functionality="upload" />
+                    <Avatar visibleOnMedia="large" />
+                </div>
+            </header>
     )
 }
