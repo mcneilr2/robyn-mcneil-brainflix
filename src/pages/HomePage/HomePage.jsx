@@ -42,7 +42,7 @@ export default function HomePage() {
                 <CommentsForm activeVideo={activeVideo} />
                 <CommentsList activeVideo={activeVideo} />
             </article>
-            <NextVideosList activeVideo={activeVideo} setActiveVideo = {setActiveVideo} API_KEY={API_KEY} />
+            <NextVideosList activeVideo={activeVideo} API_KEY={API_KEY} />
         </section>
     </>
     )

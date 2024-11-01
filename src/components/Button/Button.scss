@@ -4,45 +4,27 @@
 
 
 .header__upload, .comments__add {
-
-    &-container *, &-container, &-button, &-icon {
-        background-color: $brainflix-blue;
+    &-icon {
+        background-color: transparent;
     }
-    &-container {
+    &-container{
+        background-color: $brainflix-blue;
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $brainflix-blue;
+        font-weight: 600;
+        color: $white;
         height: 2.5rem;
         width: 100%;
-        padding-left: .75rem;
+        padding: .75rem;
         margin: $mobile-padding-between-components 0rem;
         @include tablet {
             min-width: 9.375rem;
             margin: 0rem calc($large-padding-between-components/2);
         }
-
-    }
-    &-button {
-        font-weight: 600;
-        height: 100%;
-        width: 100%;
-        border: none;
-        color: $white;
-        padding-right: 2rem;
         &:hover {
             background-color: $brainflix-darkblue;
-            
         }
 
-    }
-}
-
-.comments__add {
-    @include tablet{
-        &-container {
-            width: auto;
-            min-width: 9.375rem;
-            padding-right: 2rem;
-        }
     }
 }
