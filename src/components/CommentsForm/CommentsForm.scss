@@ -42,7 +42,6 @@
         color: $silver;
         font-weight: 600;
         letter-spacing: .0625rem;  
-        padding-left: $mobile-padding-between-components;
         @include flexy-box-align(column, start, start);
         @include tablet {
             width: auto;
@@ -52,6 +51,7 @@
         }
       }
       &__input-section {
+        padding-left: $mobile-padding-between-components;
         width: 100%;
         @include tablet {
             @include flexy-box-align(row, end, space-between);

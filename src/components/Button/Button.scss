@@ -3,19 +3,21 @@
 @use '../../styles/partials/global' as *;
 
 
+#header__upload-button {
+    width: 100%;
+}
 .header__upload, .comments__add {
     &-icon {
         background-color: transparent;
+        margin-right: 6rem;
     }
     &-container{
         background-color: $brainflix-blue;
         @include flexy-box-align(row, center, left);
         border-radius: .25rem;
         border: 1px solid $brainflix-blue;
-        font-weight: 600;
         color: $white;
         height: 2.5rem;
-        width: 100%;
         padding: .75rem;
         margin: $mobile-padding-between-components 0rem;
         @include tablet {
@@ -27,4 +29,8 @@
         }
 
     }
+}
+
+.comments__add-icon {
+    margin-right: 4rem;
 }
