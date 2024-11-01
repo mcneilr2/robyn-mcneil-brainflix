@@ -49,10 +49,12 @@
     &__details {
         @include flexy-box-align(row, start, space-between);
         padding-top: $mobile-padding-between-components;
-        border-bottom: .125rem solid $mercury;
+        border-bottom: .0625rem solid $mercury;
         margin: 0rem $mobile-padding-between-components;
         @include tablet {
             margin: 0rem $large-padding-between-components;
+            border-bottom: .125rem solid $mercury;
+
         }
         @include desktop {
             margin: 0rem 6rem;

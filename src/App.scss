@@ -8,9 +8,3 @@
     box-sizing: border-box;
 }
 
-.main-content--desktop {
-     @include desktop {
-        @include flexy-box-align(row, start, start);
-        height: auto;
-    }
-}

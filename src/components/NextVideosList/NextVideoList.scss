@@ -7,45 +7,41 @@
     @include flexy-box-align(column, start, left);
     margin: 0rem;
     padding: $mobile-padding-between-components;
+    @include tablet {
+        padding: $large-padding-between-components;
+    }
     &__title {
         color: $silver;
         font-weight: 600;
         padding-bottom: $mobile-padding-between-components;
-    }
-    @include tablet {
-        padding-top: $large-padding-between-components;
+        @include tablet {
+            padding-bottom: 0rem;
+        }
     }
 }
 
 .video {
     &__image {
-        width: 100%;
         background-color: $mercury;
         border-radius: .25rem;
-        &-container {
-            width: 50vw;
-            padding: $large-padding-between-components;
-    }
+        width: 30vw;
     }
     
     &__details {
-        gap: 1rem;
-        margin-left: .5rem;
-        width: 100%;
         color: $brainflix-black;
-        @include flexy-box-align(column, start, center);
+        height: 3.5rem;
+        padding-left: $mobile-padding-between-components;
+        @include flexy-box-align(column, start, space-between);
     }
     
     &__card {
         @include flexy-box-align(row, center, center);
         width: 100%;
-        padding: .25rem 0rem 0rem 0rem;
+        margin-bottom: .5rem;
     }
     &__title {
         font-weight: 600;
-        @include tablet {
-            padding-bottom: $large-padding-between-components;
-        }
+        
     }
 }
 

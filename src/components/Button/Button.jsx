@@ -16,7 +16,7 @@ export default function Button({functionality}) {
     <Link to={isUpload ? "/upload" : "/"} id={isUpload ? "header__upload-button" : "comments__button"}>
         <div className={(isUpload ? "header__upload-container" : "comments__add-container")}>
                 <img className={isUpload ? "header__upload-icon" : "comments__add-icon"} src={isUpload ? uploadIcon : addCommentsIcon} alt={isUpload ? "upload icon" : "add comment icon"} />
-                {isUpload ? "UPLOAD" : "COMMENTS"}
+                {isUpload ? "UPLOAD" : "COMMENT"}
         </div>  
     </Link>
       

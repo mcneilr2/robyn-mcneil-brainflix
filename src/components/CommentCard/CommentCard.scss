@@ -3,13 +3,11 @@
 @use '../../styles/partials/global' as *;
 
 .video-comment {
-    @include tablet {
-      padding: 0rem ($large-padding-between-components + 4rem) $large-padding-between-components ($large-padding-between-components + 4rem);
-    }
     &__card {
       @include flexy-box-align(row, start, left);
       border-bottom: .0625rem solid $mercury;
       padding: $mobile-padding-between-components 0rem;
+
       @include desktop {
         padding-right: $large-padding-between-components;
       }
