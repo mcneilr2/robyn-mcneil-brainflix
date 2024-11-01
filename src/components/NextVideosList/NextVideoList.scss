@@ -15,8 +15,39 @@
     @include tablet {
         padding-top: $large-padding-between-components;
     }
-
-
 }
+
+.video {
+    &__image {
+        width: 100%;
+        background-color: $mercury;
+        border-radius: .25rem;
+        &-container {
+            width: 50vw;
+            padding: $large-padding-between-components;
+    }
+    }
+    
+    &__details {
+        gap: 1rem;
+        margin-left: .5rem;
+        width: 100%;
+        color: $brainflix-black;
+        @include flexy-box-align(column, start, center);
+    }
+    
+    &__card {
+        @include flexy-box-align(row, center, center);
+        width: 100%;
+        padding: .25rem 0rem 0rem 0rem;
+    }
+    &__title {
+        font-weight: 600;
+        @include tablet {
+            padding-bottom: $large-padding-between-components;
+        }
+    }
+}
+
 
 

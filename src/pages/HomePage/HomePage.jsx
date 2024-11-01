@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useParams} from 'react-router-dom';
 import axios from "axios"
 import data from '../../data/video-details.json';
 import './HomePage.scss'
@@ -11,32 +12,25 @@ import NextVideosList from '../../components/NextVideosList/NextVideoList'
 
 export default function HomePage() {
     const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
-    const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
+    const params = useParams();
+    const selectedVideoId = params.videoId ? params.videoId : "84e96018-4022-434e-80bf-000ce4cd12b8"
+    const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`
     
-    const [videos, setVideos] = useState ([])
     const [activeVideo, setActiveVideo] = useState([])
 
-
-    const getVideos = async () => {
+    const getVideo = async () => {
         try {
             const response = await axios.get(baseUrl)
-            setVideos(response.data)
-
-        } catch(error) {
-            console.error("Error fetching video data", error)
-        }
-
-        try {
-            const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8?api_key=${API_KEY}`)
             setActiveVideo(response.data)
+
         } catch(error) {
             console.error("Error fetching video data", error)
         }
     }
 
     useEffect(() => {
-        getVideos();
-    }, []);
+        getVideo();
+    }, [activeVideo]);
 
 
     return (
@@ -48,7 +42,7 @@ export default function HomePage() {
                 <CommentsForm activeVideo={activeVideo} />
                 <CommentsList activeVideo={activeVideo} />
             </article>
-            <NextVideosList activeVideo={activeVideo} setActiveVideo = {setActiveVideo} videos={videos} />
+            <NextVideosList activeVideo={activeVideo} setActiveVideo = {setActiveVideo} API_KEY={API_KEY} />
         </section>
     </>
     )
