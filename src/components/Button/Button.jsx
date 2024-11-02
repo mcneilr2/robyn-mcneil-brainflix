@@ -1,25 +1,38 @@
 import uploadIcon from '../../assets/icons/upload.svg';
 import addCommentsIcon from '../../assets/icons/add_comment.svg';
+import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({functionality}) {
-       
-    let isUpload = false
-    if(functionality == "upload") {
-        isUpload=true
-    } else {isUpload=false}
+export default function Button({linkPath, section, text}) {
+    let icon = uploadIcon
+    switch (text) {
+        case "UPLOAD":
+            icon = uploadIcon;
+        case "COMMENT":
+            icon = addCommentsIcon;
+        case "PUBLISH":
+            icon = publishIcon;
+        default:
+            icon = uploadIcon;
+    }
 
-
+    function buttonSubmitHandler(){
+        if(text=="PUBLISH") {
+            alert("Thank you for submitting content to BrainFlix!")
+        } else {}
+    }
     return (
     <>
-    <Link to={isUpload ? "/upload" : "/"} id={isUpload ? "header__upload-button" : "comments__button"}>
-        <div className={(isUpload ? "header__upload-container" : "comments__add-container")}>
-                <img className={isUpload ? "header__upload-icon" : "comments__add-icon"} src={isUpload ? uploadIcon : addCommentsIcon} alt={isUpload ? "upload icon" : "add comment icon"} />
-                {isUpload ? "UPLOAD" : "COMMENT"}
+    <Link to={linkPath} onClick={buttonSubmitHandler} id = {section + "_" + text + "-button"}>
+        <div className={section + "__" + text + "-container"}>
+                <img className={section +  "__" + text + "-icon"} src={icon}/>
+                {text}
         </div>  
     </Link>
       
     </>
     )
+
+
 }

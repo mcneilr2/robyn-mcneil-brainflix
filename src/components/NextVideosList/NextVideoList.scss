@@ -11,7 +11,7 @@
         padding: $large-padding-between-components;
     }
     @include desktop {
-        padding: 2rem 0rem 0rem 2rem;
+        padding: 2rem 0rem 0rem 1rem;
         border-left: .125rem solid $mercury;
     }
     &__title {
@@ -33,7 +33,7 @@
         border-radius: .25rem;
         width: 30vw;
         @include tablet {
-            width: 18vw;
+            width: 15vw;
         }
         @include desktop {
             width: 10vw

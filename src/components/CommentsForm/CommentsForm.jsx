@@ -19,8 +19,8 @@ export default function CommentsForm() {
                     JOIN THE CONVERSATION
                     <textarea className="comments-form__text-area" type="textarea" placeholder = "Add a new comment"></textarea>
                 </label>
-                <Button isUpload = "false" />
-            </div>
+                <Button linkPath="/" section="comment-form" text="COMMENT" />
+                </div>
         </form>
     </>
     )

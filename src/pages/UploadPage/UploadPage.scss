@@ -1,0 +1,44 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/global' as *;
+
+.upload-video__thumbnail {
+    width: 100%;
+    padding-bottom: $mobile-padding-between-components;;
+}
+
+.upload-video {
+    padding: $mobile-padding-between-components;
+    border-top: .0625rem solid $mercury;
+    &__title {
+        padding-bottom: $mobile-padding-after-headline;
+    }
+    &__label {
+        color: $silver;
+        @include flexy-box-align(column, left, center);
+    }
+    &__description-input, &__title-input {
+          width: 100%;
+          min-height: 2.25rem;
+          padding: 0.75rem;
+          border-radius: .25rem;
+          border: .0625rem solid $mercury;
+          background-color: $alabaster;
+          color: $brainflix-black;
+          @include tablet {
+              min-height: 0rem;
+              height: auto;
+          }
+          &:focus {
+            border: .125rem solid $brainflix-blue;
+            border-radius: .25rem;
+          }
+          &:invalid {
+            border: .125rem solid red;
+            border-radius: .25rem;
+          }
+        }
+        &__description-input {
+            height: 5rem;
+        }
+}

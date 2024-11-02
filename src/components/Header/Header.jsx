@@ -20,7 +20,7 @@ export default function Header() {
                         </div> 
                             <Avatar visibleOnMedia="small"/>
                     </div>
-                    <Button functionality="upload" />
+                    <Button linkPath="/upload" section="header" text="UPLOAD" />
                     <Avatar visibleOnMedia="large" />
                 </div>
             </header>

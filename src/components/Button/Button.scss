@@ -3,13 +3,13 @@
 @use '../../styles/partials/global' as *;
 
 
-#header__upload-button {
+#header_UPLOAD-button {
     width: 100%;
     @include tablet {
         margin-right: calc($large-padding-between-components/2);
     }
 }
-.header__upload, .comments__add {
+.header__UPLOAD, .comment-form__COMMENT, .upload__PUBLISH {
     &-icon {
         background-color: transparent;
         padding-right: 30%;
