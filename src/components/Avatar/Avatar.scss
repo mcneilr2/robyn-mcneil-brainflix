@@ -4,21 +4,23 @@
 
 
 .header__avatar {
-    &--small, &--large, &--all {
-        object-fit: cover;
-        border-radius: 50%;
-        background-color: $mercury;
-        max-height: 2.25rem;
-        max-width: 2.25rem;
-    }
-    &-container {
         &--small, &--large, &--all {
-            box-sizing: content-box;
-            display: flex;
-            width: 2.25rem;
-            height: 2.25rem;
+            background-image: url('../../assets/images/Mohan-muruge.jpg');
+            background-size: cover;
+            background-position-x: 20%;
+            border-radius: 50%;
+            max-width: 2.25rem;
+            max-height: 2.25rem;
+            min-width: 2.25rem;
+            min-height: 2.25rem;
+            @include tablet {
+                max-width: 2.5rem;
+                max-height: 2.5rem;
+                min-width: 2.5rem;
+                min-height: 2.5rem;
+            }
         }
-    }
+
 
     &-container--small, &--small {
         @include tablet {
@@ -34,8 +36,7 @@
     }
 
     &-container--all {
-        padding-top: $mobile-padding-between-components*1.5;
-        
+        padding-top: $mobile-padding-between-components*1.5; 
     }
 
     

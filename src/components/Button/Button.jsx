@@ -5,15 +5,14 @@ import { Link } from 'react-router-dom'
 import './Button.scss'
 
 export default function Button({linkPath, section, text}) {
-    let icon = uploadIcon
-    switch (text) {
-        case "UPLOAD":
-            icon = uploadIcon;
-        case "COMMENT":
-            icon = addCommentsIcon;
-        case "PUBLISH":
-            icon = publishIcon;
-    }
+    let icon = ""
+    if (text=="UPLOAD") {
+        icon = uploadIcon
+    } else if(text == "COMMENT"){
+        icon = addCommentsIcon
+    } else if(text == "PUBLISH"){
+        icon = publishIcon
+    } else { console.log("Error") }
 
     function buttonSubmitHandler(){
         if(text=="PUBLISH") {
