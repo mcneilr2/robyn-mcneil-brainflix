@@ -11,7 +11,7 @@
             padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) $large-padding-between-components ;
         }
         @include desktop {
-            padding: $large-padding-between-components/2 $desktop-padding;
+            padding: calc($large-padding-between-components/2) $desktop-padding;
         }
     }
     &__description {
