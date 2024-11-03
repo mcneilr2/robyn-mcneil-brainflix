@@ -7,10 +7,10 @@
     width: 100%;
     @include tablet {
         @include flexy-box-align(row, center, space-between);
-        padding: $large-padding-between-components/2 $large-padding-between-components;
+        padding: calc($large-padding-between-components/2) $large-padding-between-components;
     }
     @include desktop {
-        padding: $large-padding-between-components/2 0rem;
+        padding: calc($large-padding-between-components/2) 0rem;
     }
     &__logo {
         max-height: 1.5625rem;
