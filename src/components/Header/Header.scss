@@ -27,6 +27,8 @@
         @include flexy-box-align(row, center, center);
         width: 100%;
         &--large-display{
+            width: 100%;
+            padding: 0rem $mobile-padding-between-components;
             @include flexy-box-align(column, center, center);
             @include tablet {
                 @include flexy-box-align(row, center, end);

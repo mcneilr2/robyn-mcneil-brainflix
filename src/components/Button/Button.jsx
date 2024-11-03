@@ -13,8 +13,6 @@ export default function Button({linkPath, section, text}) {
             icon = addCommentsIcon;
         case "PUBLISH":
             icon = publishIcon;
-        default:
-            icon = uploadIcon;
     }
 
     function buttonSubmitHandler(){
@@ -27,7 +25,9 @@ export default function Button({linkPath, section, text}) {
     <Link to={linkPath} onClick={buttonSubmitHandler} id = {section + "_" + text + "-button"}>
         <div className={section + "__" + text + "-container"}>
                 <img className={section +  "__" + text + "-icon"} src={icon}/>
-                {text}
+                <div className={section + "__" + text + "-text-container"}>
+                  {text}
+                </div>
         </div>  
     </Link>
       

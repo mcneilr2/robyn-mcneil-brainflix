@@ -32,9 +32,11 @@ function UploadPage() {
         </label>
         <Button linkPath="/" section="upload" text="PUBLISH" />
         </form>
-      <Link className="upload-video__cancel-button" to={`/`}>
-      CANCEL
-      </Link>
+        <div className="upload-video__cancel-container">
+          <Link className="upload-video__cancel-link" to={`/`}>
+            CANCEL
+          </Link>
+        </div>
     </section>
     </>
   )

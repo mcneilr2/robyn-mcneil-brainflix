@@ -12,10 +12,17 @@
 .header__UPLOAD, .comment-form__COMMENT, .upload__PUBLISH {
     &-icon {
         background-color: transparent;
-        padding-right: 30%;
         @include tablet {
             padding-right: 20%;
         }
+    }
+    &-text-container {
+        background-color: transparent;
+        width: 100%;
+        padding-top: 2px;
+        font-size: .75rem;
+        @include flexy-box-align(column, center, end)
+
     }
     &-container{
         background-color: $brainflix-blue;
@@ -36,3 +43,5 @@
         }
     }
 }
+
+

@@ -2,13 +2,30 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/global' as *;
 
-.upload-video__thumbnail {
-    width: 100%;
-    padding-bottom: $mobile-padding-between-components;;
+.upload-video {
+    &__thumbnail {
+        width: 100%;
+    }
 }
 
+.upload__PUBLISH-container {
+    margin-top: 0rem;
+}
+
+.upload-video__cancel-container {
+    @include flexy-box-align(row, center, center);
+    padding-left: 1.5rem;
+}
+
+.upload-video__cancel-link {
+    font-size: .75rem;
+    color: $brainflix-blue;
+    padding: $mobile-padding-between-components 0rem;
+}
+
+
 .upload-video {
-    padding: $mobile-padding-between-components;
+    padding: $mobile-padding-before-headline $mobile-padding-between-components $mobile-padding-after-headline $mobile-padding-between-components;
     border-top: .0625rem solid $mercury;
     &__title {
         padding-bottom: $mobile-padding-after-headline;
@@ -16,6 +33,7 @@
     &__label {
         color: $silver;
         @include flexy-box-align(column, left, center);
+        padding-bottom: $mobile-padding-between-components;
     }
     &__description-input, &__title-input {
           width: 100%;
