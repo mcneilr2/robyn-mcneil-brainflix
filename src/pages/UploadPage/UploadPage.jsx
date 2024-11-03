@@ -12,9 +12,9 @@ function UploadPage() {
   return (
     <>    
     <section className = "upload-video">
+    <h1 className = "upload-video__title">Upload Video</h1>
       <form className = "upload-video__form">
-        <h1 className = "upload-video__title">Upload Video</h1>
-        <label className="upload-video__label">
+        <label className="upload-video__label" id="upload-video__thumbnail-image">
           VIDEO THUMBNAIL
           <img 
           className="upload-video__thumbnail" 
@@ -22,15 +22,17 @@ function UploadPage() {
           alt="views icon" 
           />
         </label>
-        <label className="upload-video__label">
-          TITLE YOUR VIDEO 
-          <input className="upload-video__title-input" placeholder="Add a title to your video" />
-        </label>
-        <label className="upload-video__label--border-bottom">
-          ADD A VIDEO DESCRIPTION
-          <textarea className="upload-video__description-input" type="textarea" placeholder = "Add a description to your video"></textarea>        
-        </label>
-          </form>
+        <div className = "upload-video__inputs-section">
+          <label className="upload-video__label">
+            TITLE YOUR VIDEO 
+            <input className="upload-video__title-input" placeholder="Add a title to your video" />
+          </label>
+          <label className="upload-video__label--border-bottom">
+            ADD A VIDEO DESCRIPTION
+            <textarea className="upload-video__description-input" type="textarea" placeholder = "Add a description to your video"></textarea>        
+          </label>
+        </div>
+      </form>
           <div className="upload-video__button-section">
             <Button linkPath="/" section="upload" text="PUBLISH" />
             <div className="upload-video__cancel-container">

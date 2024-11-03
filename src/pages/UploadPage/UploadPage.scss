@@ -9,7 +9,27 @@
             width: 50%;
             padding-top: .5rem;
         }
+        @include desktop {
+            width: 100%;
+            height: auto;
+        }
     }
+}
+
+#upload-video__thumbnail-image {
+    @include desktop {
+        width: 60%;
+        padding-bottom: $mobile-padding-between-components;
+    }
+}
+
+.upload-video__inputs-section{
+    @include desktop{
+        width: 100%;
+        margin: 0rem 0rem 0rem $large-padding-between-components;
+        @include flexy-box-align(column, left, start);
+    }
+
 }
 
 .upload__PUBLISH-container {
@@ -22,15 +42,17 @@
 }
 
 .upload-video__cancel-link {
-    font-size: 1rem;
-    font-weight: 600;
     color: $brainflix-blue;
     padding: $mobile-padding-between-components 0rem;
     @include tablet {
+        font-size: 1rem;
+        font-weight: 600;
         position: absolute;
         left: 60%;
         @include font-styling(.75rem, 600, 1.25rem);
-
+    }
+    @include desktop {
+        left: 70%;
     }
 }
 
@@ -39,7 +61,10 @@
     padding: $mobile-padding-before-headline $mobile-padding-between-components $mobile-padding-after-headline $mobile-padding-between-components;
     border-top: .0625rem solid $mercury;
     @include tablet {
-        padding: $mobile-padding-before-headline $large-padding-between-components $mobile-padding-after-headline $large-padding-between-components;
+        padding: $large-padding-before-headline $large-padding-between-components $large-padding-after-headline $large-padding-between-components;
+    }
+    @include desktop {
+        padding: $large-padding-before-headline $desktop-padding;
     }
     &__title {
         padding-bottom: $mobile-padding-after-headline;
@@ -69,6 +94,7 @@
               min-height: 0rem;
               height: auto;
               padding: 1rem;
+              margin-top: .25rem;
           }
           &:focus {
             border: .125rem solid $brainflix-blue;
@@ -82,9 +108,16 @@
         &__description-input {
             height: 5rem;
             @include tablet {
-                height: 6rem;
+                height: $desktop-padding;
             }
         }
+    &__form {
+        @include desktop {
+            @include flexy-box-align(row, start, left);
+            border-bottom: 1px solid $mercury;
+            margin-bottom: $mobile-padding-between-components;
+        }
+    }
 }
 
 .upload-video__label--border-bottom {
@@ -92,7 +125,11 @@
         border-bottom: .0625rem solid $mercury;
         margin-bottom: 1.5rem;
         padding-bottom: 1.5rem;
-
+    @include desktop {
+        border: none;
+        margin-bottom: 0rem;
+        padding-bottom: 0rem;;
+    }
     }
 
 }
@@ -101,5 +138,8 @@
     @include tablet {
         @include flexy-box-align(row, center, right);
         width: 103%;
+    }
+    @include desktop {
+        width: 102%;
     }
 }
