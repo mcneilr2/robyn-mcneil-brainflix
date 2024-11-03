@@ -26,16 +26,18 @@ function UploadPage() {
           TITLE YOUR VIDEO 
           <input className="upload-video__title-input" placeholder="Add a title to your video" />
         </label>
-        <label className="upload-video__label">
+        <label className="upload-video__label--border-bottom">
           ADD A VIDEO DESCRIPTION
           <textarea className="upload-video__description-input" type="textarea" placeholder = "Add a description to your video"></textarea>        
         </label>
-        <Button linkPath="/" section="upload" text="PUBLISH" />
-        </form>
-        <div className="upload-video__cancel-container">
-          <Link className="upload-video__cancel-link" to={`/`}>
-            CANCEL
-          </Link>
+          </form>
+          <div className="upload-video__button-section">
+            <Button linkPath="/" section="upload" text="PUBLISH" />
+            <div className="upload-video__cancel-container">
+              <Link className="upload-video__cancel-link" to={`/`}>
+                CANCEL
+              </Link>
+            </div>
         </div>
     </section>
     </>

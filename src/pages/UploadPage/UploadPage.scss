@@ -5,6 +5,10 @@
 .upload-video {
     &__thumbnail {
         width: 100%;
+        @include tablet {
+            width: 50%;
+            padding-top: .5rem;
+        }
     }
 }
 
@@ -18,22 +22,40 @@
 }
 
 .upload-video__cancel-link {
-    font-size: .75rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: $brainflix-blue;
     padding: $mobile-padding-between-components 0rem;
+    @include tablet {
+        position: absolute;
+        left: 60%;
+        @include font-styling(.75rem, 600, 1.25rem);
+
+    }
 }
 
 
 .upload-video {
     padding: $mobile-padding-before-headline $mobile-padding-between-components $mobile-padding-after-headline $mobile-padding-between-components;
     border-top: .0625rem solid $mercury;
+    @include tablet {
+        padding: $mobile-padding-before-headline $large-padding-between-components $mobile-padding-after-headline $large-padding-between-components;
+    }
     &__title {
         padding-bottom: $mobile-padding-after-headline;
+        @include tablet {
+            border-bottom: .0625rem solid $mercury;
+            margin-bottom: $large-padding-between-components;
+        }
     }
-    &__label {
+    &__label, &__label--border-bottom {
         color: $silver;
         @include flexy-box-align(column, left, center);
         padding-bottom: $mobile-padding-between-components;
+        @include tablet {
+            @include font-styling(1rem, 600, 1.25rem);
+            padding-bottom: $large-padding-between-components;
+        }
     }
     &__description-input, &__title-input {
           width: 100%;
@@ -46,6 +68,7 @@
           @include tablet {
               min-height: 0rem;
               height: auto;
+              padding: 1rem;
           }
           &:focus {
             border: .125rem solid $brainflix-blue;
@@ -58,5 +81,25 @@
         }
         &__description-input {
             height: 5rem;
+            @include tablet {
+                height: 6rem;
+            }
         }
+}
+
+.upload-video__label--border-bottom {
+    @include tablet {
+        border-bottom: .0625rem solid $mercury;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+
+    }
+
+}
+
+.upload-video__button-section {
+    @include tablet {
+        @include flexy-box-align(row, center, right);
+        width: 103%;
+    }
 }
