@@ -26,7 +26,7 @@ function UploadPage() {
           </label>
           <label className="upload-video__label--border-bottom">
             ADD A VIDEO DESCRIPTION
-            <textarea className="upload-video__description-input" placeholder = "Add a description to your video" id="upload-video__description-input" ></textarea>        
+            <textarea className="upload-video__description-input" placeholder = "Add a description to your video" id="upload-video__description-input" rows={5}></textarea>        
           </label>
         </div>
       </form>

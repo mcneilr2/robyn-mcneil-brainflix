@@ -50,8 +50,6 @@
         }
         &-container {
             @include flexy-box-align(row, center, left);
-            border-radius: .25rem;
-            border: 1px solid $mercury;
             box-sizing: border-box;
             min-height: 2.25rem;
             min-width: 15rem;

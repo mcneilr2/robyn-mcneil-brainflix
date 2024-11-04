@@ -72,6 +72,9 @@
             margin-top: .25rem;
         }
     }
+    &__description-input {
+        padding-bottom: 0rem;
+    }
 
     &__form {
         @include desktop {
@@ -128,7 +131,6 @@
         padding-bottom: $mobile-padding-between-components;
     }
 }
-
 .upload__PUBLISH-container {
     margin-top: 0;
 }

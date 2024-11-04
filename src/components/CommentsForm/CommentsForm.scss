@@ -50,6 +50,9 @@
             @include flexy-box-align(row, end, space-between);
         }
       }
+      &__img-section {
+        margin-top: 1.125rem;
+      }
       
 
 }
