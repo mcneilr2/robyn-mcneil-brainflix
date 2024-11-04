@@ -1,8 +1,6 @@
 import './CommentCard.scss'
-import { useTimeAgo } from 'react-time-ago'
 
-export default function CommentCard({comment, name, date}) {
-    
+export default function CommentCard({id, comment, name, date}) {
     return (
     <>
     <article className="video-comment__card">
