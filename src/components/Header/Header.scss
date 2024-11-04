@@ -52,13 +52,14 @@
             @include flexy-box-align(row, center, left);
             border-radius: .25rem;
             border: 1px solid $mercury;
-            box-sizing: content-box;
+            box-sizing: border-box;
             min-height: 2.25rem;
             min-width: 15rem;
             width: 100%;
             padding-left: 6px;
             margin-right: 12px;
             background-color: $alabaster; 
+            @include input-field-state-styling();
             @include tablet{
                 min-height: 2.5rem;
                 margin-right: calc($large-padding-between-components/2);
@@ -75,15 +76,6 @@
             padding-left: .75rem;
             border: none;
             color: $brainflix-black;
-            outline: none;
-            &:focus {
-                border: .125rem solid $brainflix-blue;
-                border-radius: .25rem;
-            }
-            &:invalid {
-                border: .125rem solid red;
-                border-radius: .25rem;
-            }
         } 
     }
 }

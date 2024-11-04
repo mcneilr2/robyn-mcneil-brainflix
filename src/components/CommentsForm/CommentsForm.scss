@@ -29,14 +29,7 @@
             min-height: 0rem;
             height: auto;
         }
-        &:focus, &:active {
-          border: .125rem solid $brainflix-blue;
-          border-radius: .25rem;
-        }
-        &:invalid {
-          border: .125rem solid red;
-          border-radius: .25rem;
-        }
+        @include input-field-state-styling()
       }
       &__input-label {
         color: $silver;

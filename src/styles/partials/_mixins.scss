@@ -14,6 +14,20 @@
     justify-content: $justify;
 }
 
+@mixin input-field-state-styling(){
+    border-radius: .25rem;
+    border: .0625rem solid $mercury;
+    outline: none;
+    &:active, &:focus {
+        border: .125rem solid $brainflix-blue;
+        border-radius: .25rem;
+      }
+    &:invalid {
+        border: .125rem solid red;
+        border-radius: .25rem;
+      }
+}
+
 
 @mixin desktop {
     @media (min-width: $desktop){

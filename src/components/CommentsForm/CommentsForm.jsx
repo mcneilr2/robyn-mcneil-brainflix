@@ -17,7 +17,7 @@ export default function CommentsForm() {
             <div className="comments-form__input-section">
                 <label className="comments-form__input-label">
                     JOIN THE CONVERSATION
-                    <textarea className="comments-form__text-area" id="comments-form__text-area" placeholder = "Add a new comment" minLength= "10"></textarea>
+                    <textarea className="comments-form__text-area" id="comments-form__text-area" placeholder = "Add a new comment"></textarea>
                 </label>
                 <Button linkPath="/" section="comment-form" text="COMMENT" />
                 </div>
