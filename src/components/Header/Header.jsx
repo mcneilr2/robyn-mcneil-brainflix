@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import logo from '../../assets/images/Brainflix-logo.svg'
 import searchIcon from '../../assets/icons/search.svg';
 import Avatar from '../Avatar/Avatar'
 import Button from '../Button/Button'
 import './Header.scss'
 
-
 export default function Header() {
+    function onSubmitFunction(event){
+        event.preventDefault()
+        const navigate = useNavigate()
+        navigate('/upload')
+        console.log("test")
+    }
     return (
         <header className = "header">
         <Link to="/" className="header__link">

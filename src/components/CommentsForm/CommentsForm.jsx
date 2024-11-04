@@ -5,9 +5,6 @@ import Button from '../Button/Button'
 
 
 export default function CommentsForm() {
-    function submitHandler(submitData) {
-        submitData.preventDefault()
-    }
     return (
     <>
         <form className="comments-form" id="comment-submission__form">
@@ -19,7 +16,7 @@ export default function CommentsForm() {
                     JOIN THE CONVERSATION
                     <textarea className="comments-form__text-area" id="comments-form__text-area" placeholder = "Add a new comment"></textarea>
                 </label>
-                <Button linkPath="/" section="comment-form" text="COMMENT" />
+                <Button linkPath="" section="comment-form" text="COMMENT" type="submit"/>
                 </div>
         </form>
     </>

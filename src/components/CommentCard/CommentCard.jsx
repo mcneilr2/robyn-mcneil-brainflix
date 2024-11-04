@@ -1,32 +1,28 @@
 import './CommentCard.scss'
+import { useTimeAgo } from 'react-time-ago'
 
-
-export default function CommentCard(props) {
-    const clickHandler = () => {
-        props.changeActiveCard(props.id)
-      }
+export default function CommentCard({comment, name, date}) {
     
     return (
     <>
-    <article className="video-comment__card" onClick={clickHandler}>
+    <article className="video-comment__card">
         <div className="video-comment__image-container">
             <img className="video-comment__image" />
         </div>
         <div className="video-comment__text-container">
             <div className="video-comment__header-container">
                 <p className="video-comment__name">
-                    {props.name}
+                    {name}
                 </p>
                 <p className="video-comment__date">
-                    {props.date}
+                    {date}
                 </p>
             </div>
             <p className="video-comment__text">
-                    {props.comment}
+                    {comment}
             </p>
         </div>
     </article>
-    
     </>
     )
 }

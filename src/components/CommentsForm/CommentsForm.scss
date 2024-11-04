@@ -8,7 +8,7 @@
     box-sizing: border-box;
     margin: 0rem $mobile-padding-between-components;
     @include tablet {
-      padding-bottom: $large-padding-between-components/2;
+      padding-bottom: calc($large-padding-between-components/2);
       margin: 0rem $large-padding-between-components;
     }
     @include desktop {
