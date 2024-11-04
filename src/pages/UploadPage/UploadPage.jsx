@@ -22,11 +22,11 @@ function UploadPage() {
         <div className = "upload-video__inputs-section">
           <label className="upload-video__label">
             TITLE YOUR VIDEO 
-            <input className="upload-video__title-input" placeholder="Add a title to your video" />
+            <input className="upload-video__title-input" placeholder="Add a title to your video" id="upload-video__title-input" />
           </label>
           <label className="upload-video__label--border-bottom">
             ADD A VIDEO DESCRIPTION
-            <textarea className="upload-video__description-input" type="textarea" placeholder = "Add a description to your video"></textarea>        
+            <textarea className="upload-video__description-input" placeholder = "Add a description to your video" id="upload-video__description-input" ></textarea>        
           </label>
         </div>
       </form>

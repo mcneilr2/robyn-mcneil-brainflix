@@ -29,7 +29,7 @@
             min-height: 0rem;
             height: auto;
         }
-        &:focus {
+        &:focus, &:active {
           border: .125rem solid $brainflix-blue;
           border-radius: .25rem;
         }
