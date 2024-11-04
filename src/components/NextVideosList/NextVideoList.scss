@@ -2,24 +2,67 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/global' as *;
 
-aside {
+
+.next-videos {
     @include flexy-box-align(column, start, left);
-    margin: 0rem;
-    padding: $mobile-padding-between-components;
+    margin: 0rem $mobile-padding-between-components;
+    padding: $mobile-padding-between-components 0rem;
+    border-top: .0625rem solid $mercury;
     @include tablet {
         padding: $large-padding-between-components;
     }
-}
-.next-videos {
-    padding-top: $mobile-padding-before-headline;
+    @include desktop {
+        padding: 2rem 0rem 0rem 1rem;
+        border-left: .125rem solid $mercury;
+        margin: 0rem;
+    }
     &__title {
         color: $silver;
         font-weight: 600;
-    }
-    @include tablet {
-        width: 50%;
-        padding-top: $large-padding-between-components;
+        padding-bottom: $mobile-padding-between-components;
+        @include tablet {
+            padding-bottom: $large-padding-between-components;
+        }
+        @include desktop {
+            padding-bottom: 1rem;
+        }
     }
 }
+
+.video {
+    &__image {
+        background-color: $mercury;
+        border-radius: .25rem;
+        width: 30vw;
+        @include tablet {
+            width: 15vw;
+        }
+        @include desktop {
+            width: 10vw
+        }
+    }
+    
+    &__details {
+        color: $brainflix-black;
+        height: 3.5rem;
+        padding-left: $mobile-padding-between-components;
+        @include flexy-box-align(column, start, space-between);
+        @include tablet {
+            height: 4.5rem;
+        }
+    }
+    
+    &__card {
+        @include flexy-box-align(row, center, center);
+        width: 100%;
+        margin-bottom: .5rem;
+
+    }
+    &__title {
+        font-weight: 600;
+        
+    }
+}
+
 
 

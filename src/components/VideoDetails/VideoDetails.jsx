@@ -1,35 +1,32 @@
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import viewsIcon from '../../assets/icons/views.svg'
 import likesIcon from '../../assets/icons/likes.svg'
-
 
 import './VideoDetails.scss'
 
 
-export default function VideoDetails(props) {
-    const activeVideoTitle = props.data.find(checkCurrentVideo).title;
-    const activeVideoChannel = props.data.find(checkCurrentVideo).channel;
-    const activeVideoViews = props.data.find(checkCurrentVideo).views;
-    const activeVideoTimestamp = props.data.find(checkCurrentVideo).timestamp;
-    const activeVideoDate = new Date(activeVideoTimestamp)
-    const activeVideoDateString = activeVideoDate.toLocaleDateString("en-US")
-    const activeVideoLikes = props.data.find(checkCurrentVideo).likes;
-    const activeVideoDecription = props.data.find(checkCurrentVideo).description;
-    const activeVideoLikeCount = props.data.find(checkCurrentVideo).comments.length;
-    function checkCurrentVideo(video) {
-        return video.id == props.activeVideoId
+export default function VideoDetails({activeVideo}) {
+    let numComments = 0
+    try { 
+        numComments = activeVideo.comments.length 
+    } catch(error) {
+        numComments = 0
     }
+
     return (
     <>
         <h1 className = "current-video__title">
-        {activeVideoTitle}
+        {activeVideo.title}
         </h1>
         <section className="current-video__details">
             <div className="current-video__name-date">
                 <p className="current-video__channel">
-                    {"By " + activeVideoChannel}
+                    {"By " + activeVideo.channel}
                 </p>
                 <p className="current-video__date">
-                    {activeVideoDateString}
+                    {(new Date(activeVideo.timestamp)).toLocaleDateString("en-US")}
                 </p>
             </div>
             <div className="current-video__interactions-section">
@@ -40,7 +37,7 @@ export default function VideoDetails(props) {
                     alt="views icon" 
                     />
                     <p className="current-video__views">
-                        {activeVideoViews}
+                        {activeVideo.views}
                     </p>
                 </div>
                 <div className="current-video__likes-container">
@@ -50,16 +47,16 @@ export default function VideoDetails(props) {
                     alt="likes icon" 
                     />
                     <p className="current-video__likes">
-                        {activeVideoLikes}
+                        {activeVideo.likes}
                     </p>
                 </div>
             </div>
         </section>
         <p className="current-video__description">
-            {activeVideoDecription}
+            {activeVideo.description}
         </p>
-        <p className="current-video__like-count">
-            {activeVideoLikeCount + " Comments"}
+        <p className="current-video__comment-count">
+            {numComments + " Comments"}
         </p>
     </>
     )

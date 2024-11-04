@@ -5,7 +5,6 @@
 
 #root {
     @include flexy-box-align(column, start, center);
-    width: 100vw;
     box-sizing: border-box;
-
 }
+

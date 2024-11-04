@@ -3,57 +3,41 @@
 
 
 
-.header__avatar{
-    &--mobile, &--comments {
-        object-fit: cover;
-        border-radius: 50%;
-        background-color: $mercury;
-        max-height: 2.25rem;
-        max-width: 2.25rem;
-    }
-    &--mobile{
+.header__avatar {
+        &--small, &--large, &--all {
+            background-image: url('../../assets/images/Mohan-muruge.jpg');
+            background-size: cover;
+            background-position-x: 20%;
+            border-radius: 50%;
+            max-width: 2.25rem;
+            max-height: 2.25rem;
+            min-width: 2.25rem;
+            min-height: 2.25rem;
+            @include tablet {
+                max-width: 2.5rem;
+                max-height: 2.5rem;
+                min-width: 2.5rem;
+                min-height: 2.5rem;
+            }
+        }
+
+
+    &-container--small, &--small {
         @include tablet {
             display: none;
         }
     }
 
-
-    &--desktop {
+    &-container--large, &--large {
         display: none;
-        object-fit: cover;
-        border-radius: 50%;
-        background-color: $mercury;
-        max-height: 2.25rem;
-        max-width: 2.25rem;
         @include tablet {
-            display: block;
-        }
-    }
-
-    &-container {
-        &--mobile, &--comments{
-            box-sizing: content-box;
             display: flex;
-            width: 2.25rem;
-            height: 2.25rem;
-        }
-        &--mobile {
-            @include tablet {
-                display: none;
-            }
-        }
-        &--comments {
-            padding: $mobile-padding-between-components*1.5 $mobile-padding-between-components 0rem 0rem;
-        }
-        &--desktop{
-            display: none;
-            box-sizing: content-box;
-            width: 2.25rem;
-            height: 2.25rem;
-            @include tablet {
-                display: flex;
-            }
         }
     }
 
+    &-container--all {
+        padding-top: $mobile-padding-between-components*1.5; 
+    }
+
+    
 }

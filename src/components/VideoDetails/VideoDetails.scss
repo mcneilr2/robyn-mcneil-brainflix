@@ -4,23 +4,23 @@
 
 
 .current-video{
-    &__like-count {
+    &__comment-count {
         font-weight: 600;
         padding: 0rem $mobile-padding-between-components $mobile-padding-between-components $mobile-padding-between-components;
         @include tablet {
             padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) $large-padding-between-components ;
         }
         @include desktop {
-            padding: $large-padding-between-components 6rem;
+            padding: $large-padding-between-components/2 $desktop-padding;
         }
     }
     &__description {
         padding: $mobile-padding-between-components;
         @include tablet {
-            padding: $large-padding-between-components;
+            padding: $large-padding-between-components $large-padding-between-components*1.5 $large-padding-between-components $large-padding-between-components;
         }
         @include desktop {
-            padding: 1rem 6rem 0rem 6rem;
+            padding: $mobile-padding-between-components 2rem 0rem $desktop-padding;
         }
     }
     &__interactions-section{
@@ -34,7 +34,10 @@
         padding-bottom: $mobile-padding-between-components;
         @include flexy-box-align(row, center, left);
         @include tablet {
-            padding: 0rem $large-padding-between-components calc($large-padding-between-components/2) 0rem;
+            padding: 0rem $large-padding-between-components calc($large-padding-between-components/3) 0rem;
+        }
+        @include desktop {
+            padding-bottom: .5rem;
         }
     }
     &__channel {
@@ -50,9 +53,10 @@
         margin: 0rem $mobile-padding-between-components;
         @include tablet {
             margin: 0rem $large-padding-between-components;
+            border-bottom: .125rem solid $mercury;
         }
         @include desktop {
-            margin: 0rem 6rem;
+            margin: 0rem 0rem 0rem 6rem;
         }
     }
     &__title {
@@ -64,8 +68,9 @@
             border: none;
             margin: 0rem $large-padding-between-components;
         }
-        @include desktop {
-            margin: 0rem 6rem;
+        @include desktop{
+            padding-left: $desktop-padding;
+            margin: 0rem;
         }
     }
     &__name-date {
@@ -82,8 +87,13 @@
         }
     }
     &__likes, &__views, &__interactions-icon {
-        padding:0rem calc($mobile-padding-between-components/2) 0rem 0rem;
+        padding: 0rem calc($mobile-padding-between-components/2) 0rem 0rem;
         color: $silver;
+    }
+    &__section {
+        @include desktop {
+            width: 70vw;
+        }
     }
 
 }
