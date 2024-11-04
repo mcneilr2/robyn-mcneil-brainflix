@@ -5,7 +5,6 @@
 
 .comments-form {
     @include flexy-box-align(row, start, left);
-    border-bottom: .0625rem solid $mercury;
     box-sizing: border-box;
     margin: 0rem $mobile-padding-between-components;
     @include tablet {
