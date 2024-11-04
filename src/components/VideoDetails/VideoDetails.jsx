@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import viewsIcon from '../../assets/icons/views.svg'
 import likesIcon from '../../assets/icons/likes.svg'
-
+import TimeAgo from 'react-timeago'
 import './VideoDetails.scss'
 
 
@@ -25,9 +25,7 @@ export default function VideoDetails({activeVideo}) {
                 <p className="current-video__channel">
                     {"By " + activeVideo.channel}
                 </p>
-                <p className="current-video__date">
-                    {(new Date(activeVideo.timestamp)).toLocaleDateString("en-US")}
-                </p>
+                <TimeAgo className="current-video__date" date={activeVideo.timestamp} locale="en-US"/>
             </div>
             <div className="current-video__interactions-section">
                 <div className="current-video__views-container">
