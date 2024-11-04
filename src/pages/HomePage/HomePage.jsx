@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams} from 'react-router-dom';
 import axios from "axios"
-import data from '../../data/video-details.json';
 import './HomePage.scss'
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import VideoDetails from '../../components/VideoDetails/VideoDetails'

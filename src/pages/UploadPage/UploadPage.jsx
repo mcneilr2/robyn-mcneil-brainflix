@@ -1,13 +1,10 @@
 import uploadImage from '../../assets/images/Upload-video-preview.jpg'
 import './UploadPage.scss'
 import Button from '../../components/Button/Button'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link} from 'react-router-dom'
 
 
 function UploadPage() {
-  
-  let navigate = useNavigate();
-
 
   return (
     <>    
