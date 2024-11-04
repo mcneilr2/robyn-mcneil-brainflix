@@ -1,6 +1,9 @@
 import './CommentCard.scss'
+import TimeAgo from 'react-timeago'
+
 
 export default function CommentCard({id, comment, name, date}) {
+    
     return (
     <>
     <article className="video-comment__card">
@@ -12,9 +15,7 @@ export default function CommentCard({id, comment, name, date}) {
                 <p className="video-comment__name">
                     {name}
                 </p>
-                <p className="video-comment__date">
-                    {date}
-                </p>
+                <TimeAgo className="video-comment__date" date={date} locale="en-US"/>
             </div>
             <p className="video-comment__text">
                     {comment}
