@@ -5,14 +5,16 @@
 
 .next-videos {
     @include flexy-box-align(column, start, left);
-    margin: 0rem;
-    padding: $mobile-padding-between-components;
+    margin: 0rem $mobile-padding-between-components;
+    padding: $mobile-padding-between-components 0rem;
+    border-top: .0625rem solid $mercury;
     @include tablet {
         padding: $large-padding-between-components;
     }
     @include desktop {
         padding: 2rem 0rem 0rem 1rem;
         border-left: .125rem solid $mercury;
+        margin: 0rem;
     }
     &__title {
         color: $silver;
