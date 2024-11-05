@@ -22,7 +22,6 @@ export default function HomePage() {
         try {
             const response = await axios.get(baseUrlVideoDetails)
             setActiveVideo(response.data)
-
         } catch(error) {
             console.error("Error fetching video data", error)
         }
@@ -39,9 +38,9 @@ export default function HomePage() {
         <VideoPlayer activeVideo = {activeVideo}  />
         <section className = "main-content">
             <article className = "current-video__section">
-                <VideoDetails activeVideo = {activeVideo} />
+                <VideoDetails activeVideo={activeVideo} />
                 <CommentsForm activeVideo={activeVideo} />
-                <CommentsList activeVideo={activeVideo} />
+                <CommentsList activeVideo={activeVideo} videoUrl={baseUrlVideoDetails} />
             </article>
             <NextVideosList activeVideo={activeVideo} API_KEY={API_KEY} />
         </section>

@@ -9,10 +9,26 @@ export default function CommentsForm({ activeVideo }) {
     const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
     const SELECTED_ID = activeVideo.id
     const baseUrlPost = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${SELECTED_ID}/comments?api_key=${API_KEY}`
-    
+
     const [comment, setComment] = useState("")
+    const [commentId, setCommentId] = useState("")
     
-    const postVideo = async (comment) => {
+    const postComment = async (comment) => {
+        try {
+            const response = await axios.post(baseUrlPost,
+                {
+                    "name": "Authenticated User",
+                    "comment": comment
+                }
+             )
+             console.log(response)
+        } catch(error) {
+            console.error("Error posting comment data", error)
+        }
+    }
+
+        
+    const deleteComment = async (comment) => {
         try {
             console.log(baseUrlPost)
             const response = await axios.post(baseUrlPost,
@@ -26,7 +42,6 @@ export default function CommentsForm({ activeVideo }) {
             console.error("Error posting comment data", error)
         }
     }
-
     const handleSubmit = (event) => {
         event.preventDefault();
     }
@@ -50,7 +65,7 @@ export default function CommentsForm({ activeVideo }) {
                         onChange={handleChange}>
                     </textarea>
                 </label>
-                <Button linkPath="" section="comment-form" text="COMMENT" type="submit" comment={comment} postFunction = {postVideo}/>
+                <Button linkPath="" section="comment-form" text="COMMENT" type="submit" comment={comment} postFunction = {postComment}/>
                 </div>
         </form>
     </>
