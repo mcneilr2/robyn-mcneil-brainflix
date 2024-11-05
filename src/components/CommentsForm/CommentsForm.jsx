@@ -11,26 +11,9 @@ export default function CommentsForm({ activeVideo }) {
     const baseUrlPost = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${SELECTED_ID}/comments?api_key=${API_KEY}`
 
     const [comment, setComment] = useState("")
-    const [commentId, setCommentId] = useState("")
     
     const postComment = async (comment) => {
         try {
-            const response = await axios.post(baseUrlPost,
-                {
-                    "name": "Authenticated User",
-                    "comment": comment
-                }
-             )
-             console.log(response)
-        } catch(error) {
-            console.error("Error posting comment data", error)
-        }
-    }
-
-        
-    const deleteComment = async (comment) => {
-        try {
-            console.log(baseUrlPost)
             const response = await axios.post(baseUrlPost,
                 {
                     "name": "Authenticated User",
