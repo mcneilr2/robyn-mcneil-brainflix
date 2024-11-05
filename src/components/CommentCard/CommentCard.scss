@@ -43,11 +43,26 @@
       width: 100%;
     }
     &__image-container {
-      display: flex;
       padding-right: $mobile-padding-between-components;
     }
     &__header-container {
       @include flexy-box-align(row, stretch, space-between);
       padding-bottom: calc($mobile-padding-between-components/2);
     }
+}
+
+.video-comment__delete--visible {
+  background-color: transparent;
+  height: 24px;
+}
+
+.video-comment__delete {
+  display: none;
+}
+.video-comment__text {
+  padding-right: $mobile-padding-between-components;
+}
+
+.video-comment__details-section {
+  @include flexy-box-align(row, center, space-between);
 }
