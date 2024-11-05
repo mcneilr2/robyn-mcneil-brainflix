@@ -4,7 +4,7 @@ import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({linkPath, section, text, formData}) {
+export default function Button({linkPath, section, text, comment, postFunction}) {
     let icon = ""
     if (text=="UPLOAD") {
         icon = uploadIcon
@@ -18,7 +18,7 @@ export default function Button({linkPath, section, text, formData}) {
         if(text=="PUBLISH") {
             alert("Thank you for submitting content to BrainFlix!")
         } else if (text=="COMMENT") {
-            console.log(formData)
+            postFunction(comment)
         }
     }
     return (
