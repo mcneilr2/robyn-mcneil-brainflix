@@ -1,8 +1,6 @@
 import './CommentsForm.scss'
 import axios from "axios"
 import Avatar from '../Avatar/Avatar'
-import Button from '../Button/Button'
-import { useState } from 'react'
 
 
 export default function CommentsForm({ activeVideo }) {
@@ -18,7 +16,6 @@ export default function CommentsForm({ activeVideo }) {
                     "comment": comment
                 }
              )
-             console.log(response)
         } catch(error) {
             console.error("Error posting comment data", error)
         }
@@ -26,7 +23,6 @@ export default function CommentsForm({ activeVideo }) {
     const handleSubmit = (event) => {
         event.preventDefault();
         postComment(event.target.commentInput.value)
-    
     }
 
     return (
@@ -36,14 +32,14 @@ export default function CommentsForm({ activeVideo }) {
                 <Avatar visibleOnMedia="all"/>
             </div>
             <div className="comments-form__input-section">
-                <label className="comments-form__input-label">
+                <label className="comments-form__input-label" htmlFor="commentInput">
                     JOIN THE CONVERSATION
                     <textarea className="comments-form__text-area" 
                         id="commentInput" 
                         placeholder = "Add a new comment" >
                     </textarea>
                 </label>
-                <button>
+                <button type="submit">
                     COMMENT
                 </button>
                 </div>
