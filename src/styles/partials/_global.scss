@@ -65,7 +65,6 @@ p {
 
 label, .header__upload-container, .comments__add-container, a {
     @include font-styling(.625rem, 600, 1.25rem);
-    // letter-spacing: .0625rem;
     @include tablet {
         @include font-styling(.75rem, 700, 1.25rem);
     }

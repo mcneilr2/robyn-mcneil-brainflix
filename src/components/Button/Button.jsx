@@ -25,7 +25,7 @@ export default function Button({linkPath, section, text, comment, postFunction})
     <>
     <Link to={linkPath} onClick={buttonSubmitHandler} id = {section + "_" + text + "-button"}>
         <div className={section + "__" + text + "-container"}>
-                <img className={section +  "__" + text + "-icon"} src={icon}/>
+                <img className={section +  "__" + text + "-icon"} src={icon} alt = "Need to put this in"/>
                 <div className={section + "__" + text + "-text-container"}>
                   {text}
                 </div>

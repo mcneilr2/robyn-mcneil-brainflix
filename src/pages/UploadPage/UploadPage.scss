@@ -4,13 +4,13 @@
 
 
 .upload-video {
-    padding: $mobile-padding-before-headline $mobile-padding-between-components $mobile-padding-after-headline $mobile-padding-between-components;
+    padding: $mp-before $mp-between $mp-after $mp-between;
     border-top: .0625rem solid $mercury;
     @include tablet {
-        padding: $large-padding-before-headline $large-padding-between-components $large-padding-after-headline $large-padding-between-components;
+        padding: $lp-before $lp-between $lp-after $lp-between;
     }
     @include desktop {
-        padding: $large-padding-before-headline $desktop-padding;
+        padding: $lp-before $dp;
     }
 
     &__thumbnail {
@@ -26,10 +26,10 @@
     }
 
     &__title {
-        padding-bottom: $mobile-padding-after-headline;
+        padding-bottom: $mp-after;
         @include tablet {
             border-bottom: .0625rem solid $mercury;
-            margin-bottom: $large-padding-between-components;
+            margin-bottom: $lp-between;
         }
     }
 
@@ -37,11 +37,11 @@
     &__label--border-bottom {
         color: $silver;
         @include flexy-box-align(column, left, center);
-        padding-bottom: $mobile-padding-between-components;
+        padding-bottom: $mp-between;
 
         @include tablet {
             @include font-styling(1rem, 600, 1.25rem);
-            padding-bottom: $large-padding-between-components;
+            padding-bottom: $lp-between;
         }
     }
     &__label--border-bottom {
@@ -80,14 +80,14 @@
         @include desktop {
             @include flexy-box-align(row, start, left);
             border-bottom: 1px solid $mercury;
-            margin-bottom: $mobile-padding-between-components;
+            margin-bottom: $mp-between;
         }
     }
 
     &__inputs-section {
         @include desktop {
             width: 100%;
-            margin-left: $large-padding-between-components;
+            margin-left: $lp-between;
             @include flexy-box-align(column, left, start);
         }
     }
@@ -99,7 +99,7 @@
 
     &__cancel-link {
         color: $brainflix-blue;
-        padding: $mobile-padding-between-components 0;
+        padding: $mp-between 0;
         
         @include tablet {
             font-size: 1rem;
@@ -128,7 +128,7 @@
 #upload-video__thumbnail-image {
     @include desktop {
         width: 60%;
-        padding-bottom: $mobile-padding-between-components;
+        padding-bottom: $mp-between;
     }
 }
 .upload__PUBLISH-container {

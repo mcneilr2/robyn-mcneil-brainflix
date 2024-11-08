@@ -25,7 +25,7 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
     <>
     <article className="video-comment__card">
         <div className="video-comment__image-container">
-            <img className="video-comment__image" />
+            <img className="video-comment__image"  />
         </div>
         <div className="video-comment__text-container">
             <div className="video-comment__header-container">

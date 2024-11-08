@@ -12,7 +12,7 @@
       margin: 0rem $lp-between;
     }
     @include desktop {
-      margin: 0rem 0rem 0rem $desktop-padding;
+      margin: 0rem 0rem 0rem $dp;
       padding-right: 2rem;
     }
     &__text-area {
