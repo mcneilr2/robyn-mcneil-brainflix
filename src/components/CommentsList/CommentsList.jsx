@@ -18,5 +18,5 @@ export default function CommentsList({ activeVideo, videoUrl }) {
             />
             ))}
         </section>
-    )} catch(error) {console.log(error)}
+    )} catch(error) {}
 }

@@ -30,7 +30,7 @@
         @include tablet {
             @include flexy-box-align(row, center, right);
         }
-        &--large-display{
+        &--row-alignment{
             width: 100%;
             padding: 0rem $mobile-padding-between-components;
             @include flexy-box-align(column, center, center);

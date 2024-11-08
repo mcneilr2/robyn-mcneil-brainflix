@@ -4,7 +4,7 @@ import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({linkPath, section, text, comment, commentID, postFunction, deleteFunction}) {
+export default function Button({linkPath, section, text, comment, postFunction}) {
     let icon = ""
     if (text=="UPLOAD") {
         icon = uploadIcon

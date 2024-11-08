@@ -14,8 +14,6 @@ export default function HomePage() {
     const params = useParams();
     const selectedVideoId = params.videoId ? params.videoId : "84e96018-4022-434e-80bf-000ce4cd12b8"
     const baseUrlVideoDetails = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`
-    
-    
     const [activeVideo, setActiveVideo] = useState([])
 
     const getVideo = async () => {
@@ -30,7 +28,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getVideo();
-    }, [activeVideo]);
+    }, [selectedVideoId]);
 
 
     return (

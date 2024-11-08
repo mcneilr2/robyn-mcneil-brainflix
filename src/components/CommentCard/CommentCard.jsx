@@ -18,7 +18,6 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
         try {
             const response = await axios.delete
             (urlBeginning + '/comments/' + id + keyString)
-             console.log(response)
         } catch(error) {
             console.error("Error posting comment data", error)
         }
