@@ -1,5 +1,4 @@
 import './CommentCard.scss'
-import TimeAgo from 'react-timeago'
 import deleteIcon from '../../assets/icons/delete.svg'
 import axios from 'axios'
 
@@ -33,7 +32,9 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
                 <p className="video-comment__name">
                     {name}
                 </p>
-                <TimeAgo className="video-comment__date" date={date}/>
+                <p className="video-comment__date">
+                    {date}
+                </p>
             </div>
             <div className="video-comment__details-section">
                 <p className="video-comment__text">
