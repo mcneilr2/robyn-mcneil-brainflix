@@ -30,7 +30,7 @@
         @include tablet {
             @include flexy-box-align(row, center, right);
         }
-        &--row-alignment{
+        &--row-display{
             width: 100%;
             padding: 0rem $mp-between;
             @include flexy-box-align(column, center, center);
