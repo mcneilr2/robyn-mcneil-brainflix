@@ -6,13 +6,13 @@
 .comments-form {
     @include flexy-box-align(row, start, left);
     box-sizing: border-box;
-    margin: 0rem $mobile-padding-between-components;
+    margin: 0rem $mp-between;
     @include tablet {
-      padding-bottom: calc($large-padding-between-components/2);
-      margin: 0rem $large-padding-between-components;
+      padding-bottom: calc($lp-between/2);
+      margin: 0rem $lp-between;
     }
     @include desktop {
-      margin: 0rem 0rem 0rem $desktop-padding;
+      margin: 0rem 0rem 0rem $dp;
       padding-right: 2rem;
     }
     &__text-area {
@@ -43,7 +43,7 @@
         }
       }
       &__input-section {
-        padding-left: $mobile-padding-between-components;
+        padding-left: $mp-between;
         width: 100%;
         @include tablet {
             @include flexy-box-align(row, end, space-between);

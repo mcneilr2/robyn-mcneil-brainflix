@@ -17,8 +17,8 @@ export default function Header() {
         <Link to="/" className="header__link">
             <img className="header__logo" src={logo} alt="brainflix logo" />
         </Link>
-            <div className = "header__horizontal-container--large-display">
-                    <div className="header__horizontal-container" on>
+            <div className = "header__horizontal-container--row-display">
+                    <div className="header__horizontal-container">
                         <div className="header__search-container">
                             <img src={searchIcon} alt="search icon" />                                 
                             <input className="header__search-input" placeholder="Search"></input>

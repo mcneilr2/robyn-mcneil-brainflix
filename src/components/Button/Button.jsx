@@ -4,7 +4,7 @@ import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({linkPath, section, text, comment, commentID, postFunction, deleteFunction}) {
+export default function Button({linkPath, section, text, comment, postFunction}) {
     let icon = ""
     if (text=="UPLOAD") {
         icon = uploadIcon
@@ -25,7 +25,7 @@ export default function Button({linkPath, section, text, comment, commentID, pos
     <>
     <Link to={linkPath} onClick={buttonSubmitHandler} id = {section + "_" + text + "-button"}>
         <div className={section + "__" + text + "-container"}>
-                <img className={section +  "__" + text + "-icon"} src={icon}/>
+                <img className={section +  "__" + text + "-icon"} src={icon} alt = "Need to put this in"/>
                 <div className={section + "__" + text + "-text-container"}>
                   {text}
                 </div>

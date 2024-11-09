@@ -25,7 +25,9 @@ export default function VideoDetails({activeVideo}) {
                 <p className="current-video__channel">
                     {"By " + activeVideo.channel}
                 </p>
-                <TimeAgo className="current-video__date" date={activeVideo.timestamp} locale="en-US"/>
+                <p className="current-video__date">
+                        {new Date(activeVideo.timestamp).toLocaleDateString("en-US")}
+                </p>
             </div>
             <div className="current-video__interactions-section">
                 <div className="current-video__views-container">

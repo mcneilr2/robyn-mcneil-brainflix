@@ -31,10 +31,14 @@ export default function NextVideosList({ activeVideo, API_KEY }) {
                 NEXT VIDEOS
             </h3>
             {videosListFiltered?.map((video) => (
-            <Link to={`/videos/${video.id}`} key={video.id}>
+            <Link to={`/videos/${video.id}`} onClick={ window.scrollTo(0,0) } key={video.id}>
                 <article className="video__card">
                     <div className="video__image-container">
-                        <img className="video__image" src={video.image} alt="next video" />
+                        <img 
+                        className="video__image" 
+                        src={video.image} 
+                        alt="next video" 
+                        />
                     </div>
                     <div className="video__details">
                         <p className="video__title">

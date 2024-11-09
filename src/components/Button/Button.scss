@@ -7,7 +7,7 @@
     width: 100%;
     @include tablet {
         width: auto;
-        margin-right: calc($large-padding-between-components/2);   
+        margin-right: calc($lp-between/2);   
     }
 }
 .header__UPLOAD, .comment-form__COMMENT, .upload__PUBLISH {
@@ -31,7 +31,7 @@
         color: $white;
         height: 2.5rem;
         padding: .75rem;
-        margin: $mobile-padding-between-components 0rem;
+        margin: $mp-between 0rem;
         @include tablet {
             min-width: 9.375rem;
             margin: 0rem;

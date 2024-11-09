@@ -12,15 +12,17 @@ import NextVideosList from '../../components/NextVideosList/NextVideoList'
 export default function HomePage() {
     const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
     const params = useParams();
-    const selectedVideoId = params.videoId ? params.videoId : "84e96018-4022-434e-80bf-000ce4cd12b8"
+    const selectedVideoId = params.videoId ? params.videoId : ""
     const baseUrlVideoDetails = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`
-    
+    const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
     
     const [activeVideo, setActiveVideo] = useState([])
 
     const getVideo = async () => {
         try {
-            const response = await axios.get(baseUrlVideoDetails)
+            const firstVideoId = (await axios.get(baseUrl)).data[0].id
+            const selectedVideoId = params.videoId ? params.videoId : firstVideoId
+            const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`)
             setActiveVideo(response.data)
         } catch(error) {
             console.error("Error fetching video data", error)
@@ -30,7 +32,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getVideo();
-    }, [activeVideo]);
+    }, [selectedVideoId]);
 
 
     return (

@@ -6,10 +6,10 @@
 .video-player {
     width: 100%;
     @include tablet {
-        padding: 0rem $large-padding-between-components;
+        padding: 0rem $lp-between;
         background: black;    
     }
     @include desktop {
-        padding: 0rem $desktop-padding*2;
+        padding: 0rem $dp*2;
     }
 }

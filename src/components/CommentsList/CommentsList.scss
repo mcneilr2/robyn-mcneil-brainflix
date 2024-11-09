@@ -4,9 +4,9 @@
 
 
 .comments-list {
-    margin: 0rem $mobile-padding-between-components;
+    margin: 0rem $mp-between;
     @include tablet {
-        margin: 0rem $large-padding-between-components;
+        margin: 0rem $lp-between;
     }
     @include desktop {
         margin: 0rem 0rem 0rem 6rem;

@@ -7,15 +7,15 @@
     width: 100%;
     @include tablet {
         @include flexy-box-align(row, center, space-between);
-        padding: $large-padding-between-components/2 $large-padding-between-components;
+        padding: $lp-between/2 $lp-between;
     }
     @include desktop {
-        padding: $large-padding-between-components/2 0rem;
+        padding: $lp-between/2 0rem;
     }
     &__logo {
         max-height: 1.5625rem;
         max-width: 7.5rem;
-        margin: $mobile-padding-between-components;
+        margin: $mp-between;
         @include tablet {
             margin: 0rem;
         }
@@ -30,16 +30,16 @@
         @include tablet {
             @include flexy-box-align(row, center, right);
         }
-        &--large-display{
+        &--row-display{
             width: 100%;
-            padding: 0rem $mobile-padding-between-components;
+            padding: 0rem $mp-between;
             @include flexy-box-align(column, center, center);
             @include tablet {
                 @include flexy-box-align(row, center, end);
                 padding-right: 0rem;
             }
             @include desktop {
-                margin-right: $desktop-padding;
+                margin-right: $dp;
             }
         }
     }
@@ -60,7 +60,7 @@
             @include input-field-state-styling();
             @include tablet{
                 min-height: 2.5rem;
-                margin-right: calc($large-padding-between-components/2);
+                margin-right: calc($lp-between/2);
                 width: 2rem;
             }
             @include desktop {

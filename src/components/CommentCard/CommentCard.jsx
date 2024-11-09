@@ -1,5 +1,4 @@
 import './CommentCard.scss'
-import TimeAgo from 'react-timeago'
 import deleteIcon from '../../assets/icons/delete.svg'
 import axios from 'axios'
 
@@ -18,7 +17,6 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
         try {
             const response = await axios.delete
             (urlBeginning + '/comments/' + id + keyString)
-             console.log(response)
         } catch(error) {
             console.error("Error posting comment data", error)
         }
@@ -27,14 +25,15 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
     <>
     <article className="video-comment__card">
         <div className="video-comment__image-container">
-            <img className="video-comment__image" />
         </div>
         <div className="video-comment__text-container">
             <div className="video-comment__header-container">
                 <p className="video-comment__name">
                     {name}
                 </p>
-                <TimeAgo className="video-comment__date" date={date}/>
+                <p className="video-comment__date">
+                    {date}
+                </p>
             </div>
             <div className="video-comment__details-section">
                 <p className="video-comment__text">
@@ -43,6 +42,7 @@ export default function CommentCard({id, comment, name, date, videoUrl}) {
                 <img className={"video-comment__delete" + userAuthModifier}
                 src={deleteIcon}
                 onClick = {deleteComment}
+                alt="delete icon"
                 /> 
             </div>
         </div>
