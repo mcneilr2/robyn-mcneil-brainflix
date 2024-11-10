@@ -1,9 +1,11 @@
 import CommentCard from '../CommentCard/CommentCard'
 import './CommentsList.scss'
 
-export default function CommentsList({ activeVideo, videoUrl }) {
+export default function CommentsList({ activeVideo, setActiveVideo, videoUrl }) {
+    
     try{
         let comments = activeVideo.comments
+        
     return (
 
         <section className="comments-list">
@@ -15,6 +17,7 @@ export default function CommentsList({ activeVideo, videoUrl }) {
             name = {comment.name}
             date = {new Date(comment.timestamp).toLocaleDateString("en-US")}
             videoUrl = {videoUrl}
+            setActiveVideo = {setActiveVideo}
             />
             ))}
         </section>

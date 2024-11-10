@@ -17,7 +17,7 @@ export default function HomePage() {
     const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
     
     const [activeVideo, setActiveVideo] = useState([])
-
+   
     const getVideo = async () => {
         try {
             const firstVideoId = (await axios.get(baseUrl)).data[0].id
@@ -42,7 +42,7 @@ export default function HomePage() {
             <article className = "current-video__section">
                 <VideoDetails activeVideo={activeVideo} />
                 <CommentsForm activeVideo={activeVideo} />
-                <CommentsList activeVideo={activeVideo} videoUrl={baseUrlVideoDetails} />
+                <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
             </article>
             <NextVideosList activeVideo={activeVideo} API_KEY={API_KEY} />
         </section>
