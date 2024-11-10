@@ -1,15 +1,12 @@
 import uploadIcon from '../../assets/icons/upload.svg';
-import addCommentsIcon from '../../assets/icons/add_comment.svg';
 import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
-export default function Button({linkPath, section, text, comment, postFunction}) {
+export default function Button({linkPath, section, text }) {
     let icon = ""
     if (text=="UPLOAD") {
         icon = uploadIcon
-    } else if(text == "COMMENT"){
-        icon = addCommentsIcon
     } else if(text == "PUBLISH"){
         icon = publishIcon
     } else { console.log("Error") }
@@ -17,8 +14,6 @@ export default function Button({linkPath, section, text, comment, postFunction})
     function buttonSubmitHandler(){
         if(text=="PUBLISH") {
             alert("Thank you for submitting content to BrainFlix!")
-        } else if (text=="COMMENT") {
-            postFunction(comment)
         }
     }
     return (

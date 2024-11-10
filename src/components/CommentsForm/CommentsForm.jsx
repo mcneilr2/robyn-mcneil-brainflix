@@ -1,12 +1,11 @@
 import './CommentsForm.scss'
 import axios from "axios"
 import Avatar from '../Avatar/Avatar'
+import commentIcon from '../../assets/icons/add_comment.svg'
 
-
-export default function CommentsForm({ activeVideo }) {
+export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) {
     const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
-    const SELECTED_ID = activeVideo.id
-    const baseUrlPost = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${SELECTED_ID}/comments?api_key=${API_KEY}`
+    const baseUrlPost = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${activeVideo.id}/comments?api_key=${API_KEY}`
     
     const postComment = async (comment) => {
         try {
@@ -16,11 +15,13 @@ export default function CommentsForm({ activeVideo }) {
                     "comment": comment
                 }
              )
+             const response2 = await axios.get(videoUrl)
+             setActiveVideo(response2.data)
         } catch(error) {
             console.error("Error posting comment data", error)
         }
     }
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         postComment(event.target.commentInput.value)
     }
@@ -39,10 +40,16 @@ export default function CommentsForm({ activeVideo }) {
                         placeholder = "Add a new comment" >
                     </textarea>
                 </label>
-                <button type="submit">
-                    COMMENT
-                </button>
+                <div className="comments-form__button-container">
+                    <img className="comments-form__button-icon"
+                    src={commentIcon}
+                    alt="comment icon">
+                    </img>
+                    <button className="comments-form__button" type="submit">
+                        COMMENT
+                    </button>
                 </div>
+            </div>
         </form>
     </>
     )

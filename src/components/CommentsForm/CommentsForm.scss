@@ -52,7 +52,44 @@
       &__img-section {
         margin-top: 1.125rem;
       }
-      
-
 }
+
+.comments-form {
+    &__button-icon {
+        background-color: transparent;
+    }
+    &__button {
+        background-color: transparent;
+        width: 100%;
+        padding-top: 2px;
+        font-size: .75rem;
+        font-weight: 600;
+        border: none;
+        color: $white;
+        @include flexy-box-align(column, center, end);
+
+    }
+    &__button-container{
+        background-color: $brainflix-blue;
+        @include flexy-box-align(row, center, left);
+        border-radius: .25rem;
+        border: 1px solid $brainflix-blue;
+        color: $white;
+        height: 2.5rem;
+        padding: .75rem;
+        margin: $mp-between 0rem;
+        @include tablet {
+            min-width: 9.375rem;
+            margin: 0rem;
+            width: 100%;
+            padding-right: 1.5rem;
+        }
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+    }
+}
+
+
+
 

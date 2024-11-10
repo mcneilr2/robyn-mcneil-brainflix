@@ -41,7 +41,7 @@ export default function HomePage() {
         <section className = "main-content">
             <article className = "current-video__section">
                 <VideoDetails activeVideo={activeVideo} />
-                <CommentsForm activeVideo={activeVideo} />
+                <CommentsForm activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}/>
                 <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
             </article>
             <NextVideosList activeVideo={activeVideo} API_KEY={API_KEY} />
