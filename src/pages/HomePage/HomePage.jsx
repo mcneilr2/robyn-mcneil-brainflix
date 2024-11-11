@@ -10,11 +10,10 @@ import NextVideosList from '../../components/NextVideosList/NextVideoList'
 
 
 export default function HomePage() {
-    const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
     const params = useParams();
     const selectedVideoId = params.videoId ? params.videoId : ""
-    const baseUrlVideoDetails = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`
-    const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
+    const baseUrlVideoDetails = `http://localhost:5050/videos/${selectedVideoId}`
+    const baseUrl = `http://localhost:5050/videos`
     
     const [activeVideo, setActiveVideo] = useState([])
    
@@ -22,7 +21,7 @@ export default function HomePage() {
         try {
             const firstVideoId = (await axios.get(baseUrl)).data[0].id
             const selectedVideoId = params.videoId ? params.videoId : firstVideoId
-            const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${selectedVideoId}?api_key=${API_KEY}`)
+            const response = await axios.get(`http://localhost:5050/videos/${selectedVideoId}`)
             setActiveVideo(response.data)
         } catch(error) {
             console.error("Error fetching video data", error)
@@ -44,7 +43,7 @@ export default function HomePage() {
                 <CommentsForm activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}/>
                 <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
             </article>
-            <NextVideosList activeVideo={activeVideo} API_KEY={API_KEY} />
+            <NextVideosList activeVideo={activeVideo} baseUrl={baseUrl}/>
         </section>
     </>
     )

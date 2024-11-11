@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom'
 import axios from "axios"
 import './NextVideoList.scss'
 
-export default function NextVideosList({ activeVideo, API_KEY }) {
-    const baseUrl = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${API_KEY}`
+export default function NextVideosList({ activeVideo, baseUrl }) {
 
     const [videosListFiltered, setVideosListFiltered] = useState([])
 
