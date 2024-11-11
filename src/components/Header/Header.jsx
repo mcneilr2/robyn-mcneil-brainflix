@@ -14,7 +14,7 @@ export default function Header() {
     }
     return (
         <header className = "header">
-        <Link to="/" className="header__link">
+        <Link to="/" className="header__link-logo">
             <img className="header__logo" src={logo} alt="brainflix logo" />
         </Link>
             <div className = "header__horizontal-container--row-display">
@@ -30,9 +30,11 @@ export default function Header() {
                         src={uploadIcon}
                         alt="upload icon">
                         </img>
-                        <button className="header__upload-button" type="submit">
-                            UPLOAD
-                        </button>
+                        <Link to="/upload" className="header__link-upload">
+                            <button className="header__upload-button">
+                                UPLOAD
+                            </button>
+                        </Link>
                     </div>
                     <Avatar visibleOnMedia="large" />
                 </div>

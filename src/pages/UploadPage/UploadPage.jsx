@@ -1,7 +1,7 @@
 import uploadImage from '../../assets/images/Upload-video-preview.jpg'
 import './UploadPage.scss'
 import Button from '../../components/Button/Button'
-import { Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 function UploadPage() {
@@ -31,7 +31,6 @@ function UploadPage() {
         </div>
       </form>
           <div className="upload-video__button-section">
-            <Button linkPath="/" section="upload" text="PUBLISH" />
             <div className="upload-video__cancel-container">
               <Link className="upload-video__cancel-link" to={`/`}>
                 CANCEL

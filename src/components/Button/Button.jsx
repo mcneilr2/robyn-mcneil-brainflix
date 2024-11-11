@@ -1,15 +1,8 @@
-import uploadIcon from '../../assets/icons/upload.svg';
 import publishIcon from '../../assets/icons/publish.svg'
 import { Link } from 'react-router-dom'
 import './Button.scss'
 
 export default function Button({linkPath, section, text }) {
-    let icon = ""
-    if (text=="UPLOAD") {
-        icon = uploadIcon
-    } else if(text == "PUBLISH"){
-        icon = publishIcon
-    } else { console.log("Error") }
 
     function buttonSubmitHandler(){
         if(text=="PUBLISH") {
