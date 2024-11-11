@@ -29,7 +29,6 @@
         }
         &:invalid {
           border: 2px solid red;
-
         }
         @include tablet {
             min-height: 0rem;

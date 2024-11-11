@@ -25,17 +25,17 @@ export default function Header() {
                         </div> 
                             <Avatar visibleOnMedia="small"/>
                     </div>
+                    <Link to="/upload" className="header__link-upload">
                     <div className="header__upload-container">
                         <img className="header__upload-icon"
                         src={uploadIcon}
                         alt="upload icon">
                         </img>
-                        <Link to="/upload" className="header__link-upload">
                             <button className="header__upload-button">
                                 UPLOAD
                             </button>
-                        </Link>
                     </div>
+                    </Link>
                     <Avatar visibleOnMedia="large" />
                 </div>
             </header>

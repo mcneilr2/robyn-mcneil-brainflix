@@ -65,6 +65,7 @@
             }
             @include desktop {
                 width:30%;
+                margin-right: $lp-between;
             }
         }
         &-input {
@@ -83,9 +84,13 @@
 
 .header__link-upload {
     background-color: transparent;
-    margin-left: 35%;
+    width: 100%;
     @include tablet {
-        margin-left: 25%;
+        width: auto;
+        margin-right: calc($lp-between/2)
+    }
+    @include desktop {
+        margin-right: $lp-between;
     }
 }
 .header__upload {
@@ -110,14 +115,15 @@
         border: 1px solid $brainflix-blue;
         color: $white;
         height: 2.5rem;
+        width: 100%;
         padding: .75rem;
+        margin: $mp-between 0rem;
         @include tablet {
             min-width: 9.375rem;
+            margin: 0rem;
+            width: 100%;
+            flex-shrink: 2;
             padding-right: 1.5rem;
-            margin-right: calc($lp-between/2);
-        }
-        @include desktop {
-            margin-right: $lp-between;
         }
         &:hover {
             background-color: $brainflix-darkblue;
