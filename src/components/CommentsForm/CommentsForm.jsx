@@ -4,12 +4,12 @@ import Avatar from '../Avatar/Avatar'
 import commentIcon from '../../assets/icons/add_comment.svg'
 
 export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) {
-    const API_KEY = "01c51cce-0156-4b3b-a1da-88af4978af2c"
-    const baseUrlPost = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${activeVideo.id}/comments?api_key=${API_KEY}`
-    
+    videoUrl = videoUrl + activeVideo.id 
+    let commentsUrl = videoUrl + "/comments"
+
     const postComment = async (comment) => {
         try {
-            const response = await axios.post(baseUrlPost,
+            const response = await axios.post(commentsUrl,
                 {
                     "name": "Authenticated User",
                     "comment": comment
@@ -17,9 +17,7 @@ export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) 
              )
              const response2 = await axios.get(videoUrl)
              setActiveVideo(response2.data)
-        } catch(error) {
-            console.error("Error posting comment data", error)
-        }
+        } catch(error) {}
     }
     const handleSubmit = async (event) => {
         event.preventDefault();

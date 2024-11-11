@@ -3,22 +3,17 @@ import deleteIcon from '../../assets/icons/delete.svg'
 import axios from 'axios'
 
 
-export default function CommentCard({id, comment, name, date, videoUrl, setActiveVideo }) {
-    
+export default function CommentCard({id, comment, name, date, videoUrl, setActiveVideo, activeVideo }) {
     let userAuthModifier = ""
     if(name=="Authenticated User"){
         userAuthModifier = "--visible"
     } else {}
 
-    const urlSliceIndex = videoUrl.indexOf("api_key")-1
-    const urlBeginning = videoUrl.slice(0, urlSliceIndex)
-    const keyString = videoUrl.slice(urlSliceIndex)
-
     const deleteComment = async (event) => {
         try {
             event.preventDefault()
-            const response = await axios.delete(urlBeginning + '/comments/' + id + keyString)
-            const response2 = await axios.get(videoUrl)
+            const response = await axios.delete(videoUrl + activeVideo.id + "/comments/" + id)
+            const response2 = await axios.get(videoUrl + activeVideo.id)
             setActiveVideo(response2.data)
         } catch(error) {
             console.error("Error posting comment data", error)

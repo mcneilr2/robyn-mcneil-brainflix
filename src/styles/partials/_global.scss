@@ -14,6 +14,10 @@ textarea {
     resize: none;
 }
 
+::placeholder {
+    color: $brainflix-black;
+}
+
 
 @font-face {
     font-family: 'Avenir';

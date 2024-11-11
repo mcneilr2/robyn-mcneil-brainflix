@@ -74,6 +74,9 @@
             padding-left: .75rem;
             border: none;
             color: $brainflix-black;
+            &:focus {
+                border: $brainflix-blue;
+            }
         } 
     }
 }

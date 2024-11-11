@@ -18,6 +18,7 @@ export default function CommentsList({ activeVideo, setActiveVideo, videoUrl }) 
             date = {new Date(comment.timestamp).toLocaleDateString("en-US")}
             videoUrl = {videoUrl}
             setActiveVideo = {setActiveVideo}
+            activeVideo = {activeVideo}
             />
             ))}
         </section>
