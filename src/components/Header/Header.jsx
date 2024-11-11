@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
 import logo from '../../assets/images/Brainflix-logo.svg'
 import searchIcon from '../../assets/icons/search.svg';
+import uploadIcon from '../../assets/icons/upload.svg';
 import Avatar from '../Avatar/Avatar'
-import Button from '../Button/Button'
 import './Header.scss'
 
 export default function Header() {
@@ -25,7 +25,15 @@ export default function Header() {
                         </div> 
                             <Avatar visibleOnMedia="small"/>
                     </div>
-                    <Button linkPath="/upload" section="header" text="UPLOAD" />
+                    <div className="header__upload-container">
+                        <img className="header__upload-icon"
+                        src={uploadIcon}
+                        alt="upload icon">
+                        </img>
+                        <button className="header__upload-button" type="submit">
+                            UPLOAD
+                        </button>
+                    </div>
                     <Avatar visibleOnMedia="large" />
                 </div>
             </header>
