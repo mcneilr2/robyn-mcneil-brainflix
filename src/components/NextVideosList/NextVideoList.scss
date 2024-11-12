@@ -1,19 +1,18 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .next-videos {
     @include flexy-box-align(column, start, left);
     margin: 0rem $mp-between;
     padding: $mp-between 0rem;
-    border-top: .0625rem solid $mercury;
+    border-top: 0.0625rem solid $mercury;
     @include tablet {
         padding: $lp-between;
     }
     @include desktop {
         padding: 2rem 0rem 0rem 1rem;
-        border-left: .125rem solid $mercury;
+        border-left: 0.125rem solid $mercury;
         margin: 0rem;
     }
     &__title {
@@ -21,10 +20,10 @@
         font-weight: 600;
         padding-bottom: $mp-between;
         @include tablet {
-            padding-bottom: $lp-between;
+        padding-bottom: $lp-between;
         }
         @include desktop {
-            padding-bottom: 1rem;
+        padding-bottom: 1rem;
         }
     }
 }
@@ -32,52 +31,47 @@
 .video {
     &__image {
         background-color: $mercury;
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         width: 30vw;
         @include tablet {
-            width: 15vw;
+        width: 15vw;
         }
         @include desktop {
-            width: 10vw
+        width: 10vw;
         }
     }
-    
+
     &__details {
         color: $brainflix-black;
         height: 3.5rem;
         padding-left: $mp-between;
         @include flexy-box-align(column, start, space-between);
         @include tablet {
-            height: 4.5rem;
+        height: 4.5rem;
         }
     }
-    
+
     &__card {
         @include flexy-box-align(row, center, center);
         width: 100%;
-        margin-bottom: .5rem;
-
+        margin-bottom: 0.5rem;
     }
     &__title {
         font-weight: 600;
-        
     }
     &__delete {
         display: none;
         &--visible {
-            height: 2.25rem;
-            position: relative;
-            left: 5vw;
-            @include tablet {
-                height: 2.5rem;
-            }
-            @include desktop {
-                position: static;
-                padding-left: $lp-between;
-            }
+        height: 2.25rem;
+        position: relative;
+        left: 5vw;
+        @include tablet {
+            height: 2.5rem;
+        }
+        @include desktop {
+            position: static;
+            padding-left: $lp-between;
+        }
         }
     }
 }
-
-
-

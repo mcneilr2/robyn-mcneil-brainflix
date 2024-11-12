@@ -1,7 +1,6 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .comments-list {
     margin: 0rem $mp-between;
@@ -10,6 +9,6 @@
     }
     @include desktop {
         margin: 0rem 0rem 0rem 6rem;
-        @include flexy-box-align(column, start, center)
+        @include flexy-box-align(column, start, center);
     }
 }

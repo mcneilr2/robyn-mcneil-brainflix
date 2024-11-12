@@ -1,43 +1,41 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .upload-video {
     padding: $mp-before $mp-between $mp-after $mp-between;
-    border-top: .0625rem solid $mercury;
+    border-top: 0.0625rem solid $mercury;
     @include tablet {
         padding: $lp-before $lp-between $lp-after $lp-between;
     }
     @include desktop {
-        padding: $lp-before $dp calc($dp*5) $dp;
-
+        padding: $lp-before $dp calc($dp * 5) $dp;
     }
     &__upload-section {
-        @include desktop{
-            @include flexy-box-align(row, center, left);
-            border-bottom: .0625rem solid $mercury;
-            padding-bottom: $lp-between;
-            margin-bottom: $lp-between;
+        @include desktop {
+        @include flexy-box-align(row, center, left);
+        border-bottom: 0.0625rem solid $mercury;
+        padding-bottom: $lp-between;
+        margin-bottom: $lp-between;
         }
     }
     &__thumbnail {
         width: 100%;
         @include tablet {
-            width: 50%;
-            padding-top: .5rem;
+        width: 50%;
+        padding-top: 0.5rem;
         }
         @include desktop {
-            width: 100%;
-            height: auto;
+        width: 100%;
+        height: auto;
         }
     }
 
     &__title {
         padding-bottom: $mp-after;
         @include tablet {
-            border-bottom: .0625rem solid $mercury;
-            margin-bottom: $lp-between;
+        border-bottom: 0.0625rem solid $mercury;
+        margin-bottom: $lp-between;
         }
     }
 
@@ -48,20 +46,20 @@
         padding-bottom: $mp-between;
 
         @include tablet {
-            @include font-styling(1rem, 600, 1.25rem);
-            padding-bottom: $lp-between;
+        @include font-styling(1rem, 600, 1.25rem);
+        padding-bottom: $lp-between;
         }
     }
     &__label--border-bottom {
         @include tablet {
-            border-bottom: .0625rem solid $mercury;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
+        border-bottom: 0.0625rem solid $mercury;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
         }
         @include desktop {
-            border: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        border: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
         }
     }
 
@@ -74,10 +72,10 @@
         background-color: $alabaster;
         color: $brainflix-black;
         @include tablet {
-            min-height: 0;
-            height: auto;
-            padding: 1rem;
-            margin-top: .25rem;
+        min-height: 0;
+        height: auto;
+        padding: 1rem;
+        margin-top: 0.25rem;
         }
     }
     &__description-input {
@@ -86,15 +84,15 @@
 
     &__form {
         @include desktop {
-            margin-bottom: $mp-between;
+        margin-bottom: $mp-between;
         }
     }
 
     &__inputs-section {
         @include desktop {
-            width: 100%;
-            margin-left: $lp-between;
-            @include flexy-box-align(column, left, start);
+        width: 100%;
+        margin-left: $lp-between;
+        @include flexy-box-align(column, left, start);
         }
     }
 
@@ -102,7 +100,7 @@
         @include flexy-box-align(row, center, center);
         padding-left: 1rem;
         @include tablet {
-            margin-right: calc($lp-between*2);
+        margin-right: calc($lp-between * 2);
         }
     }
 
@@ -127,30 +125,29 @@
         background-color: transparent;
         width: 100%;
         padding-top: 2px;
-        font-size: .75rem;
+        font-size: 0.75rem;
         font-weight: 600;
         border: none;
         color: $white;
         @include flexy-box-align(column, center, end);
-
     }
-    &__button-container{
+    &__button-container {
         background-color: $brainflix-blue;
         @include flexy-box-align(row, center, left);
-        border-radius: .25rem;
+        border-radius: 0.25rem;
         border: 1px solid $brainflix-blue;
         color: $white;
         height: 2.5rem;
-        padding: .75rem;
+        padding: 0.75rem;
         margin: $mp-between 0rem;
         @include tablet {
-            min-width: 9.375rem;
-            margin: 0rem;
-            height: 2.75rem;
-            padding-right: 1.5rem;
+        min-width: 9.375rem;
+        margin: 0rem;
+        height: 2.75rem;
+        padding-right: 1.5rem;
         }
         &:hover {
-            background-color: $brainflix-darkblue;
+        background-color: $brainflix-darkblue;
         }
     }
 }

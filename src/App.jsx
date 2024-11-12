@@ -1,8 +1,6 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 import './App.scss'
 import Header from './components/Header/Header'
-import VideoDetails from './components/VideoDetails/VideoDetails'
 import HomePage from './pages/HomePage/Homepage'
 import UploadPage from './pages/UploadPage/UploadPage'
 

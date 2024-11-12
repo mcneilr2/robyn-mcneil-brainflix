@@ -1,9 +1,6 @@
-import axios from "axios";
 import React from "react";
-import { useParams } from "react-router-dom";
 import viewsIcon from '../../assets/icons/views.svg'
 import likesIcon from '../../assets/icons/likes.svg'
-import TimeAgo from 'react-timeago'
 import './VideoDetails.scss'
 
 

@@ -1,10 +1,8 @@
-@use './styles/partials/variables' as *;
-@use './styles/partials/mixins' as *;
-@use './styles/partials/global' as *;
-
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/global" as *;
 
 #root {
-    @include flexy-box-align(column, start, center);
-    box-sizing: border-box;
+  @include flexy-box-align(column, start, center);
+  box-sizing: border-box;
 }
-

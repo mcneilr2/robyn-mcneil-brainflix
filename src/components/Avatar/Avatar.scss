@@ -1,43 +1,42 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .header__avatar {
-        &--small, &--large, &--all {
-            background-image: url('../../assets/images/Mohan-muruge.jpg');
-            background-size: cover;
-            background-position-x: 20%;
-            border-radius: 50%;
-            max-width: 2.25rem;
-            max-height: 2.25rem;
-            min-width: 2.25rem;
-            min-height: 2.25rem;
-            @include tablet {
-                max-width: 2.5rem;
-                max-height: 2.5rem;
-                min-width: 2.5rem;
-                min-height: 2.5rem;
-            }
-        }
-
-
-    &-container--small, &--small {
+    &--small,
+    &--large,
+    &--all {
+        background-image: url("../../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        background-position-x: 20%;
+        border-radius: 50%;
+        max-width: 2.25rem;
+        max-height: 2.25rem;
+        min-width: 2.25rem;
+        min-height: 2.25rem;
         @include tablet {
-            display: none;
+        max-width: 2.5rem;
+        max-height: 2.5rem;
+        min-width: 2.5rem;
+        min-height: 2.5rem;
         }
     }
 
-    &-container--large, &--large {
+    &-container--small,
+    &--small {
+        @include tablet {
+        display: none;
+        }
+    }
+
+    &-container--large,
+    &--large {
         display: none;
         @include tablet {
-            display: flex;
+        display: flex;
         }
     }
 
     &-container--all {
-        padding-top: $mp-between*1.5; 
+        padding-top: $mp-between * 1.5;
     }
-
-    
 }

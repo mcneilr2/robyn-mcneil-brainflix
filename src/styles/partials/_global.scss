@@ -1,80 +1,75 @@
-@use './variables' as *;
-@use './mixins' as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 * {
-    background-color: $white;
-    padding: 0rem;
-    margin: 0rem;
-    text-decoration: none;
-    font-family: 'Avenir';
-    box-sizing: border-box;
+  background-color: $white;
+  padding: 0rem;
+  margin: 0rem;
+  text-decoration: none;
+  font-family: "Avenir";
+  box-sizing: border-box;
 }
 
 textarea {
-    resize: none;
+  resize: none;
 }
 
 ::placeholder {
-    color: $brainflix-black;
-}
-
-
-@font-face {
-    font-family: 'Avenir';
-    src: url("/src/assets/font/AvenirNextLTPro-Regular.otf");
-    font-weight: 400;
+  color: $brainflix-black;
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url("/src/assets/font/AvenirNextLTPro-Demi.otf");
-    font-weight: 600;
+  font-family: "Avenir";
+  src: url("/src/assets/font/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Avenir';
-    src: url("/src/assets/font/AvenirNextLTPro-Bold.otf");
-    font-weight: 700;
+  font-family: "Avenir";
+  src: url("/src/assets/font/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
 }
 
+@font-face {
+  font-family: "Avenir";
+  src: url("/src/assets/font/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
 
 h1 {
-    @include font-styling(1.5rem, 700, 2rem);
-    @include tablet {
-        @include font-styling(2.0625rem, 700, 2.75rem);
-    }
+  @include font-styling(1.5rem, 700, 2rem);
+  @include tablet {
+    @include font-styling(2.0625rem, 700, 2.75rem);
+  }
 }
 
 h2 {
-    @include font-styling(.75rem, 700, 1.25rem);
-    @include tablet {
-        @include font-styling(.75rem, 700, 1.25rem);
-    }
+  @include font-styling(0.75rem, 700, 1.25rem);
+  @include tablet {
+    @include font-styling(0.75rem, 700, 1.25rem);
+  }
 }
 
 h3 {
-    @include font-styling(.875rem, 700, 1.125rem);
-    @include tablet {
-        @include font-styling(.875rem, 700, 1.375rem);
-    }
+  @include font-styling(0.875rem, 700, 1.125rem);
+  @include tablet {
+    @include font-styling(0.875rem, 700, 1.375rem);
+  }
 }
-
 
 p {
-    @include font-styling(.8125rem, 400, 1.125rem);
-    @include tablet {
-        @include font-styling(.875rem, 400, 1.375rem);
-    }
+  @include font-styling(0.8125rem, 400, 1.125rem);
+  @include tablet {
+    @include font-styling(0.875rem, 400, 1.375rem);
+  }
 }
 
-label, .header__upload-button, .comments-form__button, a {
-    @include font-styling(.625rem, 600, 1.25rem);
-    @include tablet {
-        @include font-styling(.75rem, 700, 1.25rem);
-    }
+label,
+.header__upload-button,
+.comments-form__button,
+a {
+  @include font-styling(0.625rem, 600, 1.25rem);
+  @include tablet {
+    @include font-styling(0.75rem, 700, 1.25rem);
+  }
 }
-
-
-
-
-

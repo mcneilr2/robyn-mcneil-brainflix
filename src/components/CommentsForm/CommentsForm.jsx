@@ -24,7 +24,6 @@ export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) 
         event.preventDefault();
         postComment(event.target.commentInput.value)
         document.getElementById("comment-submission__form").reset();
-
     }
     return (
     <>

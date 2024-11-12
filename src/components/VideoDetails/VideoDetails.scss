@@ -1,43 +1,43 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
-
-.current-video{
+.current-video {
     &__comment-count {
         font-weight: 600;
         padding: 0rem $mp-between $mp-between $mp-between;
         @include tablet {
-            padding: 0rem $lp-between calc($lp-between/2) $lp-between ;
+        padding: 0rem $lp-between calc($lp-between/2) $lp-between;
         }
         @include desktop {
-            padding: $lp-between/2 $dp;
+        padding: $lp-between/2 $dp;
         }
     }
     &__description {
         padding: $mp-between;
         @include tablet {
-            padding: $lp-between $lp-between*1.5 $lp-between $lp-between;
+        padding: $lp-between $lp-between * 1.5 $lp-between $lp-between;
         }
         @include desktop {
-            padding: $mp-between 2rem 0rem $dp;
+        padding: $mp-between 2rem 0rem $dp;
         }
     }
-    &__interactions-section{
+    &__interactions-section {
         @include flexy-box-align(column, start, start);
-        padding-right: $mp-between*2;
+        padding-right: $mp-between * 2;
         @include tablet {
-            @include flexy-box-align(row, center, center)
+        @include flexy-box-align(row, center, center);
         }
     }
-    &__channel, &__date {
+    &__channel,
+    &__date {
         padding-bottom: $mp-between;
         @include flexy-box-align(row, center, left);
         @include tablet {
-            padding: 0rem $lp-between calc($lp-between/3) 0rem;
+        padding: 0rem $lp-between calc($lp-between/3) 0rem;
         }
         @include desktop {
-            padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
         }
     }
     &__channel {
@@ -49,51 +49,53 @@
     &__details {
         @include flexy-box-align(row, start, space-between);
         padding-top: $mp-between;
-        border-bottom: .0625rem solid $mercury;
+        border-bottom: 0.0625rem solid $mercury;
         margin: 0rem $mp-between;
         @include tablet {
-            margin: 0rem $lp-between;
-            border-bottom: .125rem solid $mercury;
+        margin: 0rem $lp-between;
+        border-bottom: 0.125rem solid $mercury;
         }
         @include desktop {
-            margin: 0rem 0rem 0rem 6rem;
+        margin: 0rem 0rem 0rem 6rem;
         }
     }
     &__title {
         padding: $mp-before 0rem $mp-after 0rem;
         margin: 0rem $mp-between;
-        border-bottom: .0625rem solid $mercury;
+        border-bottom: 0.0625rem solid $mercury;
         @include tablet {
-            padding: $lp-between 0rem 0rem 0rem;
-            border: none;
-            margin: 0rem $lp-between;
+        padding: $lp-between 0rem 0rem 0rem;
+        border: none;
+        margin: 0rem $lp-between;
         }
-        @include desktop{
-            padding-left: $dp;
-            margin: 0rem;
+        @include desktop {
+        padding-left: $dp;
+        margin: 0rem;
         }
     }
     &__name-date {
         @include flexy-box-align(column, start, left);
         @include tablet {
-            @include flexy-box-align(row, center, center)
+        @include flexy-box-align(row, center, center);
         }
     }
-    &__views-container, &__likes-container {
-        @include flexy-box-align(row,start, left);
+    &__views-container,
+    &__likes-container {
+        @include flexy-box-align(row, start, left);
         padding-bottom: $mp-between;
         @include tablet {
-            padding: 0rem 0rem 0rem $lp-between;
+        padding: 0rem 0rem 0rem $lp-between;
         }
     }
-    &__likes, &__views, &__interactions-icon {
+    &__likes,
+    &__views,
+    &__interactions-icon {
         padding: 0rem calc($mp-between/2) 0rem 0rem;
         color: $silver;
     }
     &__section {
         @include desktop {
-            width: 70vw;
+        width: 70vw;
         }
     }
-
 }

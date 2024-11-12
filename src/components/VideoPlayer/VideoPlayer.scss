@@ -1,15 +1,14 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .video-player {
     width: 100%;
     @include tablet {
         padding: 0rem $lp-between;
-        background: black;    
+        background: black;
     }
     @include desktop {
-        padding: 0rem $dp*2;
+        padding: 0rem $dp * 2;
     }
 }

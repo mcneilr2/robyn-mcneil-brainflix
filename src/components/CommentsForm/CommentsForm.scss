@@ -1,99 +1,90 @@
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/global' as *;
-
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .comments-form {
-    @include flexy-box-align(row, start, left);
-    box-sizing: border-box;
-    margin: 0rem $mp-between;
+  @include flexy-box-align(row, start, left);
+  box-sizing: border-box;
+  margin: 0rem $mp-between;
+  @include tablet {
+    padding-bottom: calc($lp-between/2);
+    margin: 0rem $lp-between;
+  }
+  @include desktop {
+    margin: 0rem 0rem 0rem $dp;
+    padding-right: 2rem;
+  }
+  &__text-area {
+    outline: none;
+    width: 100%;
+    height: 6rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $mercury;
+    background-color: $alabaster;
+    color: $brainflix-black;
+    &:focus {
+      border: 2px solid $brainflix-blue;
+    }
+    &:invalid {
+      border: 2px solid red;
+    }
     @include tablet {
-      padding-bottom: calc($lp-between/2);
-      margin: 0rem $lp-between;
+      min-height: 0rem;
+      height: auto;
     }
-    @include desktop {
-      margin: 0rem 0rem 0rem $dp;
-      padding-right: 2rem;
+  }
+  &__input-label {
+    color: $silver;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+    @include flexy-box-align(column, start, start);
+    @include tablet {
+      width: 90%;
+      height: 4rem;
+      padding-right: 1.5rem;
     }
-    &__text-area {
-      outline: none;
-        width: 100%;
-        height: 6rem;
-        padding: 0.75rem;
-        border-radius: .25rem;
-        border: .0625rem solid $mercury;
-        background-color: $alabaster;
-        color: $brainflix-black;
-        &:focus {
-          border: 2px solid $brainflix-blue;
-        }
-        &:invalid {
-          border: 2px solid red;
-        }
-        @include tablet {
-            min-height: 0rem;
-            height: auto;
-        }
-      }
-      &__input-label {
-        color: $silver;
-        font-weight: 600;
-        letter-spacing: .0625rem;  
-        @include flexy-box-align(column, start, start);
-        @include tablet {
-            width: 90%;
-            height: 4rem;
-            padding-right: 1.5rem;
-        }
-      }
-      &__input-section {
-        padding-left: $mp-between;
-        width: 100%;
-        @include tablet {
-            @include flexy-box-align(row, end, space-between);
-        }
-      }
-      &__img-section {
-        margin-top: 1.125rem;
-      }
+  }
+  &__input-section {
+    padding-left: $mp-between;
+    width: 100%;
+    @include tablet {
+      @include flexy-box-align(row, end, space-between);
+    }
+  }
+  &__img-section {
+    margin-top: 1.125rem;
+  }
+  &__button-icon {
+    background-color: transparent;
+  }
+  &__button {
+    background-color: transparent;
+    width: 100%;
+    padding-top: 2px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: none;
+    color: $white;
+    @include flexy-box-align(column, center, end);
+  }
+  &__button-container {
+    background-color: $brainflix-blue;
+    @include flexy-box-align(row, center, left);
+    border-radius: 0.25rem;
+    border: 1px solid $brainflix-blue;
+    color: $white;
+    height: 2.5rem;
+    padding: 0.75rem;
+    margin: $mp-between 0rem;
+    @include tablet {
+      min-width: 9.375rem;
+      margin: 0rem;
+      height: 2.75rem;
+      padding-right: 1.5rem;
+    }
+    &:hover {
+      background-color: $brainflix-darkblue;
+    }
+  }
 }
-
-.comments-form {
-    &__button-icon {
-        background-color: transparent;
-    }
-    &__button {
-        background-color: transparent;
-        width: 100%;
-        padding-top: 2px;
-        font-size: .75rem;
-        font-weight: 600;
-        border: none;
-        color: $white;
-        @include flexy-box-align(column, center, end);
-
-    }
-    &__button-container{
-        background-color: $brainflix-blue;
-        @include flexy-box-align(row, center, left);
-        border-radius: .25rem;
-        border: 1px solid $brainflix-blue;
-        color: $white;
-        height: 2.5rem;
-        padding: .75rem;
-        margin: $mp-between 0rem;
-        @include tablet {
-            min-width: 9.375rem;
-            margin: 0rem;
-            height: 2.75rem;
-            padding-right: 1.5rem;
-        }
-        &:hover {
-            background-color: $brainflix-darkblue;
-        }
-    }
-}
-
-
-
-
