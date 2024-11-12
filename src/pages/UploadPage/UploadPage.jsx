@@ -1,14 +1,36 @@
 import uploadImage from "../../assets/images/Upload-video-preview.jpg";
 import publishIcon from "../../assets/icons/publish.svg";
 import "./UploadPage.scss";
-import { Link } from "react-router-dom";
+import axios from 'axios';
+import { Link, useNavigate } from "react-router-dom";
 
 function UploadPage() {
+  const baseUrl = `http://localhost:5050/videos`
+  const navigate = useNavigate();
+
+  const postVideo = async (videoTitle, videoDesc) => {
+      try {
+          console.log(videoTitle, videoDesc, baseUrl)
+          const response = await axios.post(baseUrl,
+              {
+                  "title": videoTitle,
+                  "description": videoDesc
+              }
+           ); 
+      } catch(error) {console.log(error)}
+  }
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      postVideo(event.target.videoTitle.value, event.target.videoDesc.value);
+      alert("Thank you for posting " + event.target.videoTitle.value + " to Brainflix!");
+      navigate('/');
+  }
+  
   return (
     <>
       <section className="upload-video">
         <h1 className="upload-video__title">Upload Video</h1>
-        <form className="upload-video__form">
+        <form className="upload-video__form" onSubmit={handleSubmit}>
           <div className="upload-video__upload-section">
             <label
               className="upload-video__label"
