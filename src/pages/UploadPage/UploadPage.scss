@@ -10,9 +10,17 @@
         padding: $lp-before $lp-between $lp-after $lp-between;
     }
     @include desktop {
-        padding: $lp-before $dp;
-    }
+        padding: $lp-before $dp calc($dp*5) $dp;
 
+    }
+    &__upload-section {
+        @include desktop{
+            @include flexy-box-align(row, center, left);
+            border-bottom: .0625rem solid $mercury;
+            padding-bottom: $lp-between;
+            margin-bottom: $lp-between;
+        }
+    }
     &__thumbnail {
         width: 100%;
         @include tablet {
@@ -78,8 +86,6 @@
 
     &__form {
         @include desktop {
-            @include flexy-box-align(row, start, left);
-            border-bottom: 1px solid $mercury;
             margin-bottom: $mp-between;
         }
     }
@@ -94,34 +100,15 @@
 
     &__cancel-container {
         @include flexy-box-align(row, center, center);
-        padding-left: 1.5rem;
+        padding-left: 1rem;
+        @include tablet {
+            margin-right: calc($lp-between*2);
+        }
     }
 
     &__cancel-link {
         color: $brainflix-blue;
         padding: $mp-between 0;
-        
-        @include tablet {
-            font-size: 1rem;
-            font-weight: 600;
-            position: absolute;
-            left: 60%;
-            @include font-styling(.75rem, 600, 1.25rem);
-        }
-
-        @include desktop {
-            left: 70%;
-        }
-    }
-
-    &__button-section {
-        @include tablet {
-            @include flexy-box-align(row, center, right);
-            width: 103%;
-        }
-        @include desktop {
-            width: 102%;
-        }
     }
 }
 
@@ -131,6 +118,45 @@
         padding-bottom: $mp-between;
     }
 }
-.upload__PUBLISH-container {
-    margin-top: 0;
+
+.publish {
+    &__button-icon {
+        background-color: transparent;
+    }
+    &__button {
+        background-color: transparent;
+        width: 100%;
+        padding-top: 2px;
+        font-size: .75rem;
+        font-weight: 600;
+        border: none;
+        color: $white;
+        @include flexy-box-align(column, center, end);
+
+    }
+    &__button-container{
+        background-color: $brainflix-blue;
+        @include flexy-box-align(row, center, left);
+        border-radius: .25rem;
+        border: 1px solid $brainflix-blue;
+        color: $white;
+        height: 2.5rem;
+        padding: .75rem;
+        margin: $mp-between 0rem;
+        @include tablet {
+            min-width: 9.375rem;
+            margin: 0rem;
+            height: 2.75rem;
+            padding-right: 1.5rem;
+        }
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+    }
+}
+
+.user-interactions__container {
+    @include tablet {
+        @include flexy-box-align(row-reverse, center, end);
+    }
 }

@@ -67,7 +67,7 @@ p {
     }
 }
 
-label, .header__upload-container, .comments-form__button-container, a {
+label, .header__upload-button, .comments-form__button, a {
     @include font-styling(.625rem, 600, 1.25rem);
     @include tablet {
         @include font-styling(.75rem, 700, 1.25rem);

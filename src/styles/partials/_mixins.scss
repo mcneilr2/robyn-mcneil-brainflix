@@ -35,15 +35,8 @@
     }
 }
 
-
 @mixin tablet {
     @media (min-width: $tablet) {
-        @content;
-    }    
-}
-
-@mixin breakpoint_hero {
-    @media (min-width: 22.8125rem) {
         @content;
     }    
 }

@@ -6,12 +6,6 @@ import Avatar from '../Avatar/Avatar'
 import './Header.scss'
 
 export default function Header() {
-    function onSubmitFunction(event){
-        event.preventDefault()
-        const navigate = useNavigate()
-        navigate('/upload')
-        console.log("test")
-    }
     return (
         <header className = "header">
         <Link to="/" className="header__link-logo">
