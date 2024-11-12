@@ -11,7 +11,12 @@ export default function NextVideosList({ activeVideo, setActiveVideo, baseUrl })
   
     const deleteVideo = async (event, id) => {
         event.preventDefault();
-        console.log(id)
+        try {
+            const response = await axios.delete(baseUrl + id)
+            setActiveVideo(activeVideo)
+        } catch(error) {
+            console.error("Error fetching video data", error)
+        }
 
     }
     const getVideos = async () => {
