@@ -8,7 +8,8 @@ export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) 
     let commentsUrl = videoUrl + "/comments"
 
     const postComment = async (comment) => {
-        try {
+        if(!comment){alert("Please enter a comment before submitting")}
+        else{try {
             const response = await axios.post(commentsUrl,
                 {
                     "name": "Authenticated User",
@@ -17,13 +18,14 @@ export default function CommentsForm({ activeVideo, setActiveVideo, videoUrl }) 
              )
              const response2 = await axios.get(videoUrl)
              setActiveVideo(response2.data)
-        } catch(error) {}
+        } catch(error) {}}
     }
     const handleSubmit = async (event) => {
         event.preventDefault();
         postComment(event.target.commentInput.value)
-    }
+        document.getElementById("comment-submission__form").reset();
 
+    }
     return (
     <>
         <form className="comments-form" id="comment-submission__form" onSubmit={handleSubmit}>

@@ -8,28 +8,30 @@ function UploadPage() {
   const baseUrl = `http://localhost:5050/videos`
   const navigate = useNavigate();
 
-  const postVideo = async (videoTitle, videoDesc) => {
-      try {
+  const postVideo = async (videoTitle, videoDesc) => {  
+    if(!videoTitle || !videoDesc){alert("Please enter all details before submitting")}
+    else {try {
            const response = await axios.post(baseUrl,
               {
                   "title": videoTitle,
                   "description": videoDesc
               }
            ); 
+           alert("Thank you for posting " + videoTitle + " to Brainflix!");
+           navigate('/');
       } catch(error) {console.log(error)}
-  }
+  }}
   const handleSubmit = async (event) => {
       event.preventDefault();
       postVideo(event.target.videoTitle.value, event.target.videoDesc.value);
-      alert("Thank you for posting " + event.target.videoTitle.value + " to Brainflix!");
-      navigate('/');
+      document.getElementById("videoForm").reset();
   }
   
   return (
     <>
       <section className="upload-video">
         <h1 className="upload-video__title">Upload Video</h1>
-        <form className="upload-video__form" onSubmit={handleSubmit}>
+        <form className="upload-video__form" onSubmit={handleSubmit} id="videoForm">
           <div className="upload-video__upload-section">
             <label
               className="upload-video__label"
