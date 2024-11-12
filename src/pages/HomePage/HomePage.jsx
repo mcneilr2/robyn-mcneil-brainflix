@@ -28,7 +28,6 @@ export default function HomePage() {
         }
     }
 
-
     useEffect(() => {
         getVideo();
     }, [selectedVideoId]);
@@ -43,7 +42,7 @@ export default function HomePage() {
                 <CommentsForm activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}/>
                 <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
             </article>
-            <NextVideosList activeVideo={activeVideo} setActiveVideo={setActiveVideo} baseUrl={baseUrl}/>
+            <NextVideosList activeVideo={activeVideo} baseUrl={baseUrl}/>
         </section>
     </>
     )

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import deleteIcon from '../../assets/icons/delete.svg'
 import axios from "axios"
 import './NextVideoList.scss'
 
 export default function NextVideosList({ activeVideo, setActiveVideo, baseUrl }) {
-
+    const navigate = useNavigate();
     const [videosListFiltered, setVideosListFiltered] = useState([])
 
   
@@ -13,7 +13,8 @@ export default function NextVideosList({ activeVideo, setActiveVideo, baseUrl })
         event.preventDefault();
         try {
             const response = await axios.delete(baseUrl + id)
-            setActiveVideo(activeVideo)
+            getVideos();
+            navigate('/');
         } catch(error) {
             console.error("Error fetching video data", error)
         }
