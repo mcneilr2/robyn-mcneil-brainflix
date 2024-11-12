@@ -13,7 +13,7 @@ export default function HomePage() {
     const params = useParams();
     const selectedVideoId = params.videoId ? params.videoId : ""
     const baseUrlVideoDetails = `http://localhost:5050/videos/${selectedVideoId}`
-    const baseUrl = `http://localhost:5050/videos`
+    const baseUrl = `http://localhost:5050/videos/`
     
     const [activeVideo, setActiveVideo] = useState([])
    
@@ -43,7 +43,7 @@ export default function HomePage() {
                 <CommentsForm activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}/>
                 <CommentsList activeVideo={activeVideo} setActiveVideo={setActiveVideo} videoUrl={baseUrlVideoDetails}  />
             </article>
-            <NextVideosList activeVideo={activeVideo} baseUrl={baseUrl}/>
+            <NextVideosList activeVideo={activeVideo} setActiveVideo={setActiveVideo} baseUrl={baseUrl}/>
         </section>
     </>
     )

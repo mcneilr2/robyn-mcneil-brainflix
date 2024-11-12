@@ -10,8 +10,7 @@ function UploadPage() {
 
   const postVideo = async (videoTitle, videoDesc) => {
       try {
-          console.log(videoTitle, videoDesc, baseUrl)
-          const response = await axios.post(baseUrl,
+           const response = await axios.post(baseUrl,
               {
                   "title": videoTitle,
                   "description": videoDesc

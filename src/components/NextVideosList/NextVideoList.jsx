@@ -1,12 +1,19 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import deleteIcon from '../../assets/icons/delete.svg'
 import axios from "axios"
 import './NextVideoList.scss'
 
-export default function NextVideosList({ activeVideo, baseUrl }) {
+export default function NextVideosList({ activeVideo, setActiveVideo, baseUrl }) {
 
     const [videosListFiltered, setVideosListFiltered] = useState([])
 
+  
+    const deleteVideo = async (event, id) => {
+        event.preventDefault();
+        console.log(id)
+
+    }
     const getVideos = async () => {
         try {
             const response = await axios.get(baseUrl)
@@ -17,6 +24,12 @@ export default function NextVideosList({ activeVideo, baseUrl }) {
         } catch(error) {
             console.error("Error fetching video data", error)
         }
+    }
+
+    function authenticateUser(channel) {
+        if(channel == "Authenticated User"){
+            return "--visible"
+        } else {return ""}
     }
 
     useEffect(() => {
@@ -47,6 +60,11 @@ export default function NextVideosList({ activeVideo, baseUrl }) {
                             {video.channel}
                         </p>
                     </div>
+                    <img className={"video__delete" + authenticateUser(video.channel)}
+                    src={deleteIcon}
+                    onClick = {(event) => deleteVideo(event, video.id)}
+                    alt="delete icon"
+                    /> 
                 </article>
             </Link>
             ))

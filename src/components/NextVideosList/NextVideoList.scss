@@ -62,6 +62,21 @@
         font-weight: 600;
         
     }
+    &__delete {
+        display: none;
+        &--visible {
+            height: 2.25rem;
+            position: relative;
+            left: 5vw;
+            @include tablet {
+                height: 2.5rem;
+            }
+            @include desktop {
+                position: static;
+                padding-left: $lp-between;
+            }
+        }
+    }
 }
 
 
